@@ -6,16 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>随笔 | Hexo</title>
+  <title>Python基础语法 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="随笔">
-<meta property="og:url" content="http://example.com/tags/index.html">
+  <meta name="description" content="认识python脚本 编写python程序的文件，称为python的脚本或程序要求当前的python脚本的文件后缀名必须是.py">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Python基础语法">
+<meta property="og:url" content="http://example.com/2021/11/21/python%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="认识python脚本 编写python程序的文件，称为python的脚本或程序要求当前的python脚本的文件后缀名必须是.py">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2021-11-12T05:52:46.000Z">
-<meta property="article:modified_time" content="2021-11-12T05:54:08.276Z">
+<meta property="article:published_time" content="2021-11-21T02:33:11.000Z">
+<meta property="article:modified_time" content="2021-11-21T09:39:11.833Z">
 <meta property="article:author" content="John Doe">
+<meta property="article:tag" content="python  基础入门">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
@@ -175,27 +178,701 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="page-" class="article article-type-page " itemscope itemprop="blogPost">
+            <article id="post-python基础语法" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      随笔
+      Python基础语法
     </h1>
   
 
         
-        <a href="/tags/index.html" class="archive-article-date">
-  	<time datetime="2021-11-12T05:52:46.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-11-12</time>
+        <a href="/2021/11/21/python%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/" class="archive-article-date">
+  	<time datetime="2021-11-21T02:33:11.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-11-21</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <h1 id="认识python脚本"><a href="#认识python脚本" class="headerlink" title="认识python脚本"></a>认识python脚本</h1><blockquote>
+<p>编写python程序的文件，称为python的脚本或程序<br>要求当前的python脚本的文件后缀名必须是.py</p>
+</blockquote>
+<span id="more"></span>
+<h4 id="pycharm使用注意"><a href="#pycharm使用注意" class="headerlink" title="pycharm使用注意"></a>pycharm使用注意</h4><blockquote>
+<p>需要明确的知道你当前pycharm选择的python环境</p>
+</blockquote>
+<h4 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h4><blockquote>
+<p>注释就是一段说明文字，并不会被执行<br>在python的脚本中，开头的第一个字符如果是 # 那么就是注释了</p>
+</blockquote>
+<h4 id="print-输出函数"><a href="#print-输出函数" class="headerlink" title="print()  输出函数"></a>print()  输出函数</h4><blockquote>
+<p>print可以在程序中输出一些内容，字符串，数字。。。<br>函数就是为了完成一些功能，例如：print就是为了输出数据</p>
+</blockquote>
+<h4 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 什么是变量？</span></span><br><span class="line"><span class="comment"># 变量就是用一个英文字符串来记录或标记一些数据，并且这个被标记的数据是可以变化的</span></span><br><span class="line"><span class="comment"># num = 10 的理解</span></span><br><span class="line"><span class="comment"># 就是把数据 10 赋值给变量 num使用，之后就可以使用num来代替这个10的数据</span></span><br></pre></td></tr></table></figure>
+<h4 id="命名规范"><a href="#命名规范" class="headerlink" title="命名规范"></a>命名规范</h4><p>变量的命名要有规范</p>
+<ul>
+<li>变量名可以使用字母，数字，下划线_，</li>
+<li>不能以数字开头</li>
+<li>严格区分大小写</li>
+<li>不要使用中文</li>
+<li>不要使用关键字 if else True  False print</li>
+</ul>
+<p><strong>另外  变量的命名规范适用于脚本名称和后期的函数名及其它命令规范</strong></p>
+<h3 id="变量的定义方式"><a href="#变量的定义方式" class="headerlink" title="变量的定义方式"></a>变量的定义方式</h3><blockquote>
+<p>定义变量时 要注意遵守变量命名规范</p>
+</blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#第一种 变量定义方式</span></span><br><span class="line">a = <span class="number">10</span></span><br><span class="line">b = <span class="number">20</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#第二种定义方式</span></span><br><span class="line">a,b = <span class="number">30</span>,<span class="number">40</span></span><br></pre></td></tr></table></figure>
+<h4 id="思考：如何实现-以下两个变量的数据相互交换"><a href="#思考：如何实现-以下两个变量的数据相互交换" class="headerlink" title="思考：如何实现 以下两个变量的数据相互交换"></a>思考：如何实现 以下两个变量的数据相互交换</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 定义两个变量</span></span><br><span class="line">a = <span class="number">10</span></span><br><span class="line">b = <span class="number">20</span></span><br><span class="line"><span class="comment"># 交换两个变量的值</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 。。。</span></span><br><span class="line"></span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="string">普通方式，完成变量数据的交换</span></span><br><span class="line"><span class="string">1，把a变量的值 赋值给c  ，此时 c变量中 就是 10</span></span><br><span class="line"><span class="string">2，把b变量的值 赋值给a  ， 此时 a变量中 就是 20</span></span><br><span class="line"><span class="string">3，把c变量的值 赋值给b  ， 此时 b变量中 就是 10</span></span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="comment"># c = a</span></span><br><span class="line"><span class="comment"># a = b</span></span><br><span class="line"><span class="comment"># b = c</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 利用python定义比变量的语法来实现 变量的数据交换</span></span><br><span class="line"></span><br><span class="line">a,b = b,a</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h2 id="python的数据类型"><a href="#python的数据类型" class="headerlink" title="python的数据类型"></a>python的数据类型</h2><h3 id="什么是数据类型？"><a href="#什么是数据类型？" class="headerlink" title="什么是数据类型？"></a>什么是数据类型？</h3><blockquote>
+<p>数据类型就是数据的表现形式</p>
+<p>比如 你好 就是一个字符串，200 就是一个数字</p>
+<p>在程序当中除了这种常用的字符和数字外还有很多其它的数据表现形式</p>
+</blockquote>
+<h4 id="type-函数，可以返回当前的数据类型"><a href="#type-函数，可以返回当前的数据类型" class="headerlink" title="type() 函数，可以返回当前的数据类型"></a>type() 函数，可以返回当前的数据类型</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">s = <span class="string">&#x27;iloveyou&#x27;</span></span><br><span class="line">res = <span class="built_in">type</span>(s) </span><br><span class="line"><span class="built_in">print</span>(res)  <span class="comment"># &lt;class &#x27;str&#x27;&gt;  str == string</span></span><br></pre></td></tr></table></figure>
+<h3 id="1-字符串类型"><a href="#1-字符串类型" class="headerlink" title="1. 字符串类型"></a>1. 字符串类型</h3><ul>
+<li>单双引号都可以定义字符串</li>
+<li>三引号也可以定义字符串</li>
+<li>单双引号定义的字符串不能随意换行，需要在换行时指明换行符</li>
+<li>字符串中的引号可以互相嵌套，但是不能嵌套自己（例如不能在单引号中嵌套单引号，除非转义）</li>
+<li>字符串中可以使用转义字符，如 \r \n \t …</li>
+<li>如果不想在字符串中实现转义字符可以在字符定义时 加 <code>love = r&#39;\nihao \shijie&#39;</code></li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 定义方式就是使用 单引号 或者 双引号</span></span><br><span class="line">love = <span class="string">&#x27;iloveyou&#x27;</span></span><br><span class="line">hello = <span class="string">&quot;你好 世界&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 也可以使用三引号实现大字符串的定义，一般用于大文本字符串的定义，并且大字符串，可以换行</span></span><br><span class="line">s = <span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="string">比如说这一个</span></span><br><span class="line"><span class="string">很长很长的文章内容。。。</span></span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br></pre></td></tr></table></figure>
+<h3 id="2-数字类型"><a href="#2-数字类型" class="headerlink" title="2.数字类型"></a>2.数字类型</h3><ul>
+<li>int   整型</li>
+<li>float 浮点类型</li>
+<li>complex 复数</li>
+<li>bool  布尔类型（True，False）</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 数字类型 Number</span></span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="string">int   整型</span></span><br><span class="line"><span class="string">float 浮点类型</span></span><br><span class="line"><span class="string">complex 复数</span></span><br><span class="line"><span class="string">bool  布尔类型（True，False）</span></span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line">varn = <span class="number">521</span></span><br><span class="line">varn = -<span class="number">1111</span></span><br><span class="line"></span><br><span class="line">varn = <span class="number">3.1415926</span></span><br><span class="line"></span><br><span class="line">varn = <span class="number">0x10</span>  <span class="comment"># 十六进制</span></span><br><span class="line"></span><br><span class="line">varn = <span class="string">b&#x27;001100111&#x27;</span> <span class="comment"># bytes</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 复数</span></span><br><span class="line">varn = <span class="number">5</span>+<span class="number">6j</span>  <span class="comment"># complex</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 布尔类型  bool</span></span><br><span class="line">varn = <span class="literal">True</span></span><br><span class="line">varn = <span class="literal">False</span></span><br><span class="line"><span class="comment"># print(varn,type(varn))</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 数值类型可以参与运算</span></span><br><span class="line">a = <span class="number">10</span></span><br><span class="line">b = <span class="number">20</span></span><br><span class="line"><span class="built_in">print</span>(a+b)</span><br></pre></td></tr></table></figure>
+<h3 id="3-List列表类型"><a href="#3-List列表类型" class="headerlink" title="3.List列表类型"></a>3.List列表类型</h3><ul>
+<li>列表用来表示一系列数据，例如： 需要记录一组数字或其它数据</li>
+<li>列表中存储的数据可以是任意类型的</li>
+<li>在需要记录多个数据时，可以使用中括号进行定义 [],</li>
+<li>并且每个数据之间使用逗号分隔 ,</li>
+<li>例如以下数据，定义了几组数字</li>
+<li>列表中存储的每一组数据，称为元素</li>
+<li>列表中存储的数据，可以通过下标的方式进行获取</li>
+<li>那么列表中元素的值可不可以存储一个列表,称为 二级列表（二维列表） 或者 多级列表 （多维列表）</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="string">关于列表中的下标</span></span><br><span class="line"><span class="string">  0   1   2    3    4 </span></span><br><span class="line"><span class="string">[&#x27;a&#x27;,&#x27;b&#x27;,521,&#x27;pai&#x27;,3.1415926]</span></span><br><span class="line"><span class="string"> -5   -4   -3  -2   -1</span></span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br></pre></td></tr></table></figure>
+<h3 id="4-tuple-元组类型的定义"><a href="#4-tuple-元组类型的定义" class="headerlink" title="4. tuple 元组类型的定义"></a>4. tuple 元组类型的定义</h3><ul>
+<li>在定义多个数据内容时，可以选择使用List列表类型</li>
+<li>还可以使用元组类型来定义，</li>
+<li>元组和列表非常像，都时用于存储多个数据时使用</li>
+<li>元组使用小括号进行定义（），列表使用中括号进行定义</li>
+<li><strong>元组的最大特点就是值不能被改变</strong></li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">vart = (<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="string">&#x27;a&#x27;</span>,<span class="string">&#x27;b&#x27;</span>)</span><br><span class="line"><span class="comment"># 元组的其它定义方式</span></span><br><span class="line">vart = <span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span></span><br></pre></td></tr></table></figure>
+<h5 id="注意在定义元组时，如果元组中只有一个元素，那么需要加-不然就不是元组类型了"><a href="#注意在定义元组时，如果元组中只有一个元素，那么需要加-不然就不是元组类型了" class="headerlink" title="注意在定义元组时，如果元组中只有一个元素，那么需要加, 不然就不是元组类型了"></a>注意在定义元组时，如果元组中只有一个元素，那么需要加, 不然就不是元组类型了</h5><h3 id="5-Dict字典类型"><a href="#5-Dict字典类型" class="headerlink" title="5.Dict字典类型"></a>5.Dict字典类型</h3><ul>
+<li>字典也是用于存储一组或多组数据时使用，使用大括号 {}来定义</li>
+<li>字典是 键值对 的存储方式 name ：admin</li>
+<li>键和值之间使用冒号进行分隔，多组键值对之间使用逗号分隔</li>
+<li>键必须是字符串或数字类型，值可以是任意类型</li>
+<li>键名不能重复，值可以重复</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 比如需要记录一本书的相关数据 书名，作者，价格，。。。</span></span><br><span class="line">vard = &#123;<span class="string">&#x27;title&#x27;</span>:<span class="string">&#x27;&lt;&lt;鬼谷子&gt;&gt;&#x27;</span>,<span class="string">&#x27;author&#x27;</span>:<span class="string">&#x27;鬼谷子&#x27;</span>,<span class="string">&#x27;price&#x27;</span>:<span class="string">&#x27;29.99&#x27;</span>&#125;</span><br><span class="line"><span class="comment"># print(vard,type(vard))</span></span><br><span class="line"><span class="comment"># &#123;&#x27;title&#x27;: &#x27;&lt;&lt;鬼谷子&gt;&gt;&#x27;, &#x27;author&#x27;: &#x27;鬼谷子&#x27;, &#x27;price&#x27;: &#x27;29.99&#x27;&#125; &lt;class &#x27;dict&#x27;&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 获取字典中的值</span></span><br><span class="line"><span class="built_in">print</span>(vard[<span class="string">&#x27;title&#x27;</span>])</span><br><span class="line"><span class="comment"># 字典中的键不能重复使用，否则会覆盖</span></span><br><span class="line">vard = &#123;<span class="string">&#x27;a&#x27;</span>:<span class="number">10</span>,<span class="string">&#x27;b&#x27;</span>:<span class="number">10</span>,<span class="string">&#x27;c&#x27;</span>:<span class="number">20</span>,<span class="string">&#x27;a&#x27;</span>:<span class="string">&#x27;aa&#x27;</span>,<span class="number">1</span>:<span class="string">&#x27;abcdef&#x27;</span>,<span class="string">&#x27;2&#x27;</span>:<span class="string">&#x27;2222&#x27;</span>&#125;</span><br><span class="line"><span class="comment"># print(vard)</span></span><br></pre></td></tr></table></figure>
+<h5 id="tip-在python之前的版本中，字典是无序的"><a href="#tip-在python之前的版本中，字典是无序的" class="headerlink" title="tip: 在python之前的版本中，字典是无序的"></a>tip: 在python之前的版本中，字典是无序的</h5><hr>
+<h3 id="6-set集合类型"><a href="#6-set集合类型" class="headerlink" title="6.set集合类型"></a>6.set集合类型</h3><ul>
+<li>set集合是一个 无序且元素不重复的 集合的数据类型</li>
+<li>set集合使用 中括号或者set()方法来定义</li>
+<li>如果需要定义一个空集合时 只能使用 set()方法,因为大括号时定义的空字典</li>
+<li>集合主要用于运算，交集，差集，并集，对称集合</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">a = &#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="string">&#x27;a&#x27;</span>&#125;</span><br><span class="line"><span class="comment"># 给集合添加元素</span></span><br><span class="line"><span class="comment"># a.add(&#x27;b&#x27;)</span></span><br><span class="line"><span class="comment"># 无法获取集合中的单个元素，但是可以添加和删除</span></span><br><span class="line"><span class="comment"># a.discard(&#x27;a&#x27;)</span></span><br><span class="line"><span class="comment"># print(a)</span></span><br><span class="line"><span class="comment"># 检查当前的元素是否在集合中</span></span><br><span class="line"><span class="comment"># print(1 in a)</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># 集合主要用于运算，交集，差集，并集，对称集合</span></span><br><span class="line">a = &#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="string">&#x27;a&#x27;</span>,<span class="string">&#x27;b&#x27;</span>&#125;</span><br><span class="line">b = &#123;<span class="number">1</span>,<span class="string">&#x27;a&#x27;</span>,<span class="number">22</span>,<span class="number">33</span>&#125;</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(a &amp; b) <span class="comment"># 交集  &#123;1, &#x27;a&#x27;&#125;</span></span><br><span class="line"><span class="built_in">print</span>(a - b) <span class="comment"># 差集 &#123;&#x27;b&#x27;, 2, 3&#125;  a 集合有，b集合没有的</span></span><br><span class="line"><span class="built_in">print</span>(a | b) <span class="comment"># 并集 &#123;1, 2, 3, 33, &#x27;a&#x27;, &#x27;b&#x27;, 22&#125; 两个集合，放到一起，并且去重</span></span><br><span class="line"><span class="built_in">print</span>(a ^ b) <span class="comment"># 对称差集 &#123;33, 2, 3, &#x27;b&#x27;, 22&#125; </span></span><br></pre></td></tr></table></figure>
+<h3 id="总结数据类型"><a href="#总结数据类型" class="headerlink" title="总结数据类型"></a>总结数据类型</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="string">字符串 string</span></span><br><span class="line"><span class="string">数字类型 Number</span></span><br><span class="line"><span class="string">    整型 int</span></span><br><span class="line"><span class="string">    浮点 float</span></span><br><span class="line"><span class="string">    复数</span></span><br><span class="line"><span class="string">    布尔 bool</span></span><br><span class="line"><span class="string">列表  list</span></span><br><span class="line"><span class="string">元组  tuple</span></span><br><span class="line"><span class="string">字典  dict</span></span><br><span class="line"><span class="string">集合  set</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">可变数据类型：列表，字典，集合</span></span><br><span class="line"><span class="string">不可不数据类型： 字符串，数字，元组</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">容器类型数据 ： 字符串，列表，元组，集合，字典</span></span><br><span class="line"><span class="string">非容器类型数据： 数字，布尔类型</span></span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br></pre></td></tr></table></figure>
+<h2 id="数据类型转换"><a href="#数据类型转换" class="headerlink" title="数据类型转换"></a>数据类型转换</h2><ul>
+<li>什么是数据类型转换？<ul>
+<li>把一个数据类型转换为另一个数据类型，例如 字符串转为数字</li>
+</ul>
+</li>
+<li>为什么需要数据类型转换？<ul>
+<li>因为不同的数据类型之间不能运算</li>
+</ul>
+</li>
+<li>数据类型转换的形式？<ul>
+<li>自动类型转换</li>
+<li>强制类型转换</li>
+</ul>
+</li>
+</ul>
+<h4 id="自动类型转换"><a href="#自动类型转换" class="headerlink" title="自动类型转换"></a>自动类型转换</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 自动类型转换</span></span><br><span class="line"><span class="comment"># 当两个不同的值进行运算时，结果会向更高的精度进行计算</span></span><br><span class="line"><span class="comment"># True ==&gt; 整型 ==&gt; 浮点 ==&gt; 复数</span></span><br><span class="line">a = <span class="number">123</span></span><br><span class="line">b = <span class="literal">True</span>  <span class="comment"># 在和数字运算时 True转为数字1，False转为数字 0</span></span><br><span class="line"><span class="comment"># print(a+b)</span></span><br><span class="line"><span class="comment"># print(12.5+22)</span></span><br><span class="line"><span class="comment"># print(True+3.14)</span></span><br></pre></td></tr></table></figure>
+<h3 id="强制类型转换"><a href="#强制类型转换" class="headerlink" title="强制类型转换"></a>强制类型转换</h3><blockquote>
+<p>python中的每个数据类型都有对应的方法，可以对数据类型进行转换</p>
+</blockquote>
+<ul>
+<li>str() 可以把所有的其它数据类型转换为字符串类型</li>
+<li>int() 字符串转数字类型时，如果字符串中时纯数字，可以转换<ul>
+<li>其它容器类型不能转为数字int类型</li>
+</ul>
+</li>
+<li>float() 浮点类型的转换和int类型一样，不过转换的结果是浮点类型</li>
+<li>bool() 可以把其它类型转换布尔类型的True或False<ul>
+<li>总结，哪些情况转bool的结果是 False</li>
+<li><code>&#39;&#39;,0,0.0,False,[],&#123;&#125;,(),set()</code></li>
+</ul>
+</li>
+<li>list() 列表<ul>
+<li>数字类型是 非容器类型，不能转换为列表</li>
+<li>字符串 转换为列表时  会把字符串中的每一个字符当做列表的元素</li>
+<li>集合 可以转换为 list列表类型</li>
+<li>元组 可以转换为 list列表类型</li>
+<li>字典 可以转换为 list列表类型,只保留了字典中的键</li>
+</ul>
+</li>
+<li>tuple() 元组<ul>
+<li>数字类型 非容器类型，不能转换为元组</li>
+<li>其它容器类型的数据进行转换时，和列表一样</li>
+</ul>
+</li>
+<li>set() 集合<ul>
+<li>数字类型 非容器类型，不能转换为 集合</li>
+<li>字符串,列表，元组 可以转为 集合 结果是无序的</li>
+<li>字典转换为集合时，只保留了字典的键 key</li>
+</ul>
+</li>
+<li>dict() 字典<ul>
+<li>数字类型 非容器类型，不能转换为 字典</li>
+<li>字符串不能直接转换为 字典</li>
+<li>列表可以转换为字典，要求是一个二级列表，并且每个二级元素只能有两个值</li>
+<li>元组可以转换为字典，要求是一个二级元组，并且每个二级元素只能有两个值</li>
+</ul>
+</li>
+</ul>
+<h1 id="Python3-运算符"><a href="#Python3-运算符" class="headerlink" title="Python3 运算符"></a>Python3 运算符</h1><h2 id="什么是运算符？"><a href="#什么是运算符？" class="headerlink" title="什么是运算符？"></a>什么是运算符？</h2><p>本章节主要说明Python的运算符。举个简单的例子 <strong>4 + 5 = 9</strong> 。 例子中，<strong>4</strong> 和 <strong>5</strong> 被称为<strong>操作数</strong>，”<strong>+</strong>“ 称为运算符。</p>
+<p>Python语言支持以下类型的运算符:</p>
+<ul>
+<li>算术运算符</li>
+<li>比较（关系）运算符</li>
+<li>赋值运算符</li>
+<li>逻辑运算符</li>
+<li>位运算符</li>
+<li>成员运算符</li>
+<li>身份运算符</li>
+<li>运算符优先级</li>
+</ul>
+<p>接下来让我们一个个来学习Python的运算符。</p>
+<hr>
+<h2 id="Python算术运算符"><a href="#Python算术运算符" class="headerlink" title="Python算术运算符"></a>Python算术运算符</h2><div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:left">运算符</th>
+<th style="text-align:left">描述</th>
+<th style="text-align:left">实例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">+</td>
+<td style="text-align:left">加 - 两个对象相加</td>
+<td style="text-align:left">a + b 输出结果 31</td>
+</tr>
+<tr>
+<td style="text-align:left">-</td>
+<td style="text-align:left">减 - 得到负数或是一个数减去另一个数</td>
+<td style="text-align:left">a - b 输出结果 -11</td>
+</tr>
+<tr>
+<td style="text-align:left">*</td>
+<td style="text-align:left">乘 - 两个数相乘或是返回一个被重复若干次的字符串</td>
+<td style="text-align:left">a * b 输出结果 210</td>
+</tr>
+<tr>
+<td style="text-align:left">/</td>
+<td style="text-align:left">除 - x 除以 y</td>
+<td style="text-align:left">b / a 输出结果 2.1</td>
+</tr>
+<tr>
+<td style="text-align:left">%</td>
+<td style="text-align:left">取模 - 返回除法的余数</td>
+<td style="text-align:left">b % a 输出结果 1</td>
+</tr>
+<tr>
+<td style="text-align:left">**</td>
+<td style="text-align:left">幂 - 返回x的y次幂</td>
+<td style="text-align:left">a**b 为10的21次方</td>
+</tr>
+<tr>
+<td style="text-align:left">//</td>
+<td style="text-align:left">取整除 - 向下取接近除数的整数</td>
+<td style="text-align:left"><code>&gt;&gt;&gt; 9//2 4 &gt;&gt;&gt; -9//2 -5</code></td>
+</tr>
+</tbody>
+</table>
+</div>
+<h2 id="Python比较运算符"><a href="#Python比较运算符" class="headerlink" title="Python比较运算符"></a>Python比较运算符</h2><div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:left">运算符</th>
+<th style="text-align:left">描述</th>
+<th style="text-align:left">实例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">==</td>
+<td style="text-align:left">等于 - 比较对象是否相等</td>
+<td style="text-align:left">(a == b) 返回 False。</td>
+</tr>
+<tr>
+<td style="text-align:left">!=</td>
+<td style="text-align:left">不等于 - 比较两个对象是否不相等</td>
+<td style="text-align:left">(a != b) 返回 True。</td>
+</tr>
+<tr>
+<td style="text-align:left">&gt;</td>
+<td style="text-align:left">大于 - 返回x是否大于y</td>
+<td style="text-align:left">(a &gt; b) 返回 False。</td>
+</tr>
+<tr>
+<td style="text-align:left">&lt;</td>
+<td style="text-align:left">小于 - 返回x是否小于y。所有比较运算符返回1表示真，返回0表示假。这分别与特殊的变量True和False等价。注意，这些变量名的大写。</td>
+<td style="text-align:left">(a &lt; b) 返回 True。</td>
+</tr>
+<tr>
+<td style="text-align:left">&gt;=</td>
+<td style="text-align:left">大于等于 - 返回x是否大于等于y。</td>
+<td style="text-align:left">(a &gt;= b) 返回 False。</td>
+</tr>
+<tr>
+<td style="text-align:left">&lt;=</td>
+<td style="text-align:left">小于等于 - 返回x是否小于等于y。</td>
+<td style="text-align:left">(a &lt;= b) 返回 True。</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h2 id="Python赋值运算符"><a href="#Python赋值运算符" class="headerlink" title="Python赋值运算符"></a>Python赋值运算符</h2><div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:left">运算符</th>
+<th style="text-align:left">描述</th>
+<th style="text-align:left">实例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">=</td>
+<td style="text-align:left">简单的赋值运算符</td>
+<td style="text-align:left">c = a + b 将 a + b 的运算结果赋值为 c</td>
+</tr>
+<tr>
+<td style="text-align:left">+=</td>
+<td style="text-align:left">加法赋值运算符</td>
+<td style="text-align:left">c += a 等效于 c = c + a</td>
+</tr>
+<tr>
+<td style="text-align:left">-=</td>
+<td style="text-align:left">减法赋值运算符</td>
+<td style="text-align:left">c -= a 等效于 c = c - a</td>
+</tr>
+<tr>
+<td style="text-align:left">*=</td>
+<td style="text-align:left">乘法赋值运算符</td>
+<td style="text-align:left">c <em>= a 等效于 c = c </em> a</td>
+</tr>
+<tr>
+<td style="text-align:left">/=</td>
+<td style="text-align:left">除法赋值运算符</td>
+<td style="text-align:left">c /= a 等效于 c = c / a</td>
+</tr>
+<tr>
+<td style="text-align:left">%=</td>
+<td style="text-align:left">取模赋值运算符</td>
+<td style="text-align:left">c %= a 等效于 c = c % a</td>
+</tr>
+<tr>
+<td style="text-align:left">**=</td>
+<td style="text-align:left">幂赋值运算符</td>
+<td style="text-align:left">c <strong>= a 等效于 c = c </strong> a</td>
+</tr>
+<tr>
+<td style="text-align:left">//=</td>
+<td style="text-align:left">取整除赋值运算符</td>
+<td style="text-align:left">c //= a 等效于 c = c // a</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h2 id="Python位运算符"><a href="#Python位运算符" class="headerlink" title="Python位运算符"></a>Python位运算符</h2><p>按位运算符是把数字看作二进制来进行计算的。bin()函数可以把数字转为二进制。</p>
+<p>Python中的按位运算法则如下：</p>
+<p>下表中变量 a 为 60，b 为 13二进制格式如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">a = 0011 1100</span><br><span class="line"></span><br><span class="line">b = 0000 1101</span><br><span class="line"></span><br><span class="line">-----------------</span><br><span class="line"></span><br><span class="line">a&amp;b = 0000 1100</span><br><span class="line"></span><br><span class="line">a|b = 0011 1101</span><br><span class="line"></span><br><span class="line">a^b = 0011 0001</span><br><span class="line"></span><br><span class="line">~a  = 1100 0011</span><br></pre></td></tr></table></figure>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:left">运算符</th>
+<th style="text-align:left">描述</th>
+<th style="text-align:left">实例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">&amp;</td>
+<td style="text-align:left">按位与运算符：参与运算的两个值,如果两个相应位都为1,则该位的结果为1,否则为0</td>
+<td style="text-align:left">(a &amp; b) 输出结果 12 ，二进制解释： 0000 1100</td>
+</tr>
+<tr>
+<td style="text-align:left">\</td>
+<td style="text-align:left"></td>
+<td style="text-align:left">按位或运算符：只要对应的二个二进位有一个为1时，结果位就为1。</td>
+<td>(a \</td>
+<td>b) 输出结果 61 ，二进制解释： 0011 1101</td>
+</tr>
+<tr>
+<td style="text-align:left">^</td>
+<td style="text-align:left">按位异或运算符：当两对应的二进位相异时，结果为1</td>
+<td style="text-align:left">(a ^ b) 输出结果 49 ，二进制解释： 0011 0001</td>
+</tr>
+<tr>
+<td style="text-align:left">~</td>
+<td style="text-align:left">按位取反运算符：对数据的每个二进制位取反,即把1变为0,把0变为1。<strong>~x</strong> 类似于 <strong>-x-1</strong></td>
+<td style="text-align:left">(~a ) 输出结果 -61 ，二进制解释： 1100 0011， 在一个有符号二进制数的补码形式。</td>
+</tr>
+<tr>
+<td style="text-align:left">&lt;&lt;</td>
+<td style="text-align:left">左移动运算符：运算数的各二进位全部左移若干位，由”&lt;&lt;”右边的数指定移动的位数，高位丢弃，低位补0。</td>
+<td style="text-align:left">a &lt;&lt; 2 输出结果 240 ，二进制解释： 1111 0000</td>
+</tr>
+<tr>
+<td style="text-align:left">&gt;&gt;</td>
+<td style="text-align:left">右移动运算符：把”&gt;&gt;”左边的运算数的各二进位全部右移若干位，”&gt;&gt;”右边的数指定移动的位数</td>
+<td style="text-align:left">a &gt;&gt; 2 输出结果 15 ，二进制解释： 0000 1111</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h2 id="Python逻辑运算符"><a href="#Python逻辑运算符" class="headerlink" title="Python逻辑运算符"></a>Python逻辑运算符</h2><p>Python语言支持逻辑运算符，以下假设变量 a 为 10, b为 20:</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:left">运算符</th>
+<th style="text-align:left">逻辑表达式</th>
+<th style="text-align:left">描述</th>
+<th style="text-align:left">实例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">and</td>
+<td style="text-align:left">x and y</td>
+<td style="text-align:left">布尔”与” - 如果 x 为 False，x and y 返回 False，否则它返回 y 的计算值。</td>
+<td style="text-align:left">(a and b) 返回 20。</td>
+</tr>
+<tr>
+<td style="text-align:left">or</td>
+<td style="text-align:left">x or y</td>
+<td style="text-align:left">布尔”或” - 如果 x 是 True，它返回 x 的值，否则它返回 y 的计算值。</td>
+<td style="text-align:left">(a or b) 返回 10。</td>
+</tr>
+<tr>
+<td style="text-align:left">not</td>
+<td style="text-align:left">not x</td>
+<td style="text-align:left">布尔”非” - 如果 x 为 True，返回 False 。如果 x 为 False，它返回 True。</td>
+<td style="text-align:left">not(a and b) 返回 False</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h2 id="Python成员运算符"><a href="#Python成员运算符" class="headerlink" title="Python成员运算符"></a>Python成员运算符</h2><p>除了以上的一些运算符之外，Python还支持成员运算符，测试实例中包含了一系列的成员，包括字符串，列表或元组。</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:left">运算符</th>
+<th style="text-align:left">描述</th>
+<th style="text-align:left">实例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">in</td>
+<td style="text-align:left">如果在指定的序列中找到值返回 True，否则返回 False。</td>
+<td style="text-align:left">x 在 y 序列中 , 如果 x 在 y 序列中返回 True。</td>
+</tr>
+<tr>
+<td style="text-align:left">not in</td>
+<td style="text-align:left">如果在指定的序列中没有找到值返回 True，否则返回 False。</td>
+<td style="text-align:left">x 不在 y 序列中 , 如果 x 不在 y 序列中返回 True。</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h2 id="Python身份运算符"><a href="#Python身份运算符" class="headerlink" title="Python身份运算符"></a>Python身份运算符</h2><p>身份运算符用于比较两个对象的存储单元</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:left">运算符</th>
+<th style="text-align:left">描述</th>
+<th style="text-align:left">实例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">is</td>
+<td style="text-align:left">is 是判断两个标识符是不是引用自一个对象</td>
+<td style="text-align:left"><strong>x is y</strong>, 类似 <strong>id(x) == id(y)</strong> , 如果引用的是同一个对象则返回 True，否则返回 False</td>
+</tr>
+<tr>
+<td style="text-align:left">is not</td>
+<td style="text-align:left">is not 是判断两个标识符是不是引用自不同对象</td>
+<td style="text-align:left"><strong>x is not y</strong> ， 类似 <strong>id(a) != id(b)</strong>。如果引用的不是同一个对象则返回结果 True，否则返回 False。</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><strong>注：</strong> <a target="_blank" rel="noopener" href="https://www.runoob.com/python/python-func-id.html">id()</a> 函数用于获取对象内存地址。</p>
+<blockquote>
+<p>is 与 == 区别：</p>
+<p>is 用于判断两个变量引用对象是否为同一个， == 用于判断引用变量的值是否相等。</p>
+</blockquote>
+<h2 id="Python运算符优先级"><a href="#Python运算符优先级" class="headerlink" title="Python运算符优先级"></a>Python运算符优先级</h2><p>以下表格列出了从最高到最低优先级的所有运算符：</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:left">运算符</th>
+<th style="text-align:left">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">**</td>
+<td style="text-align:left">指数 (最高优先级)</td>
+</tr>
+<tr>
+<td style="text-align:left">~ + -</td>
+<td style="text-align:left">按位翻转, 一元加号和减号 (最后两个的方法名为 +@ 和 -@)</td>
+</tr>
+<tr>
+<td style="text-align:left">* / % //</td>
+<td style="text-align:left">乘，除，取模和取整除</td>
+</tr>
+<tr>
+<td style="text-align:left">+ -</td>
+<td style="text-align:left">加法减法</td>
+</tr>
+<tr>
+<td style="text-align:left">&gt;&gt; &lt;&lt;</td>
+<td style="text-align:left">右移，左移运算符</td>
+</tr>
+<tr>
+<td style="text-align:left">&amp;</td>
+<td style="text-align:left">位 ‘AND’</td>
+</tr>
+<tr>
+<td style="text-align:left">^ \</td>
+<td style="text-align:left"></td>
+<td>位运算符</td>
+</tr>
+<tr>
+<td style="text-align:left">&lt;= &lt; &gt; &gt;=</td>
+<td style="text-align:left">比较运算符</td>
+</tr>
+<tr>
+<td style="text-align:left">== !=</td>
+<td style="text-align:left">等于运算符</td>
+</tr>
+<tr>
+<td style="text-align:left">= %= /= //= -= += <em>= *</em>=</td>
+<td style="text-align:left">赋值运算符</td>
+</tr>
+<tr>
+<td style="text-align:left">is is not</td>
+<td style="text-align:left">身份运算符</td>
+</tr>
+<tr>
+<td style="text-align:left">in not in</td>
+<td style="text-align:left">成员运算符</td>
+</tr>
+<tr>
+<td style="text-align:left">not and or</td>
+<td style="text-align:left">逻辑运算符</td>
+</tr>
+</tbody>
+</table>
+</div>
+<blockquote>
+<p>注意：Pyhton3 已不支持 &lt;&gt; 运算符，可以使用 != 代替</p>
+</blockquote>
+<h2 id="二进制"><a href="#二进制" class="headerlink" title="二进制"></a>二进制</h2><blockquote>
+<p>二进制（binary）在数学和数字电路中指以2为基数的记数系统，以2为基数代表系统是二进位制的。这一系统中，通常用两个不同的符号0（代表零）和1（代表一）来表示 [1]  。数字电子电路中，逻辑门的实现直接应用了二进制，因此现代的计算机和依赖计算机的设备里都用到二进制。每个数字称为一个比特（Bit，Binary digit的缩写） </p>
+</blockquote>
+<h2 id="进制转换"><a href="#进制转换" class="headerlink" title="进制转换"></a>进制转换</h2><h3 id="十进制转换为二进制"><a href="#十进制转换为二进制" class="headerlink" title="十进制转换为二进制"></a>十进制转换为二进制</h3><blockquote>
+<p>一个十进制整数转换为二进制数采用 “除2取余，逆序排列”法。</p>
+<p>具体做法是：用2整除十进制整数，可以得到一个<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/商/3820976">商</a>和<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/余数/6180737">余数</a>；再用2去除商，又会得到一个商和余数，如此进行，直到商为小于1时为止，然后把先得到的余数作为二进制数的低位有效位，后得到的余数作为二进制数的高位有效位，依次排列起来</p>
+</blockquote>
+<p>例如 125 转为 二进制</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">125 / 2 = 62 余 1</span><br><span class="line">62 / 2 = 31 余 0</span><br><span class="line">31 / 2 = 15 余 1</span><br><span class="line">15 / 2 = 7 余 1</span><br><span class="line">7 / 2 = 3 余 1</span><br><span class="line">3 / 2 = 1 余 1</span><br><span class="line">1 / 2 = 0 余 1</span><br><span class="line">余数从低位到高位依此排列： 1 1 1 1 1 0 1</span><br></pre></td></tr></table></figure>
+<h3 id="二进制转换为十进制"><a href="#二进制转换为十进制" class="headerlink" title="二进制转换为十进制"></a>二进制转换为十进制</h3><blockquote>
+<p>方法：“按权展开求和”。</p>
+<p>该方法的具体步骤是先将二迸制的数写成加权系数展开式，而后根据十进制的加法规则进行求和</p>
+</blockquote>
+<p>例如：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 1 1 1 1 1 0 1</span></span><br><span class="line"><span class="number">1</span>==&gt; <span class="number">1</span>*<span class="number">2</span>^<span class="number">6</span></span><br><span class="line">	+ <span class="number">64</span></span><br><span class="line"><span class="number">1</span>==&gt; <span class="number">1</span>*<span class="number">2</span>^<span class="number">5</span></span><br><span class="line">	+ <span class="number">32</span></span><br><span class="line"><span class="number">1</span>==&gt; <span class="number">1</span>*<span class="number">2</span>^<span class="number">4</span></span><br><span class="line">	+ <span class="number">16</span></span><br><span class="line"><span class="number">1</span>==&gt; <span class="number">1</span>*<span class="number">2</span>^<span class="number">3</span></span><br><span class="line">	+ <span class="number">8</span></span><br><span class="line"><span class="number">1</span>==&gt; <span class="number">1</span>*<span class="number">2</span>^<span class="number">2</span></span><br><span class="line">	+ <span class="number">4</span></span><br><span class="line"><span class="number">0</span>==&gt; <span class="number">0</span>*<span class="number">2</span>^<span class="number">1</span></span><br><span class="line">	+ <span class="number">0</span></span><br><span class="line"><span class="number">1</span>==&gt; <span class="number">1</span>*<span class="number">2</span>^<span class="number">0</span></span><br><span class="line">	+ <span class="number">1</span></span><br><span class="line">	= <span class="number">125</span></span><br></pre></td></tr></table></figure>
+<h2 id="Python位运算符-1"><a href="#Python位运算符-1" class="headerlink" title="Python位运算符"></a>Python位运算符</h2><p>按位运算符是把数字看作二进制来进行计算的。bin()函数可以把数字转为二进制。</p>
+<p>Python中的按位运算法则如下：</p>
+<p>下表中变量 a 为 60，b 为 13二进制格式如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">a = 0011 1100</span><br><span class="line"></span><br><span class="line">b = 0000 1101</span><br><span class="line"></span><br><span class="line">-----------------</span><br><span class="line"></span><br><span class="line">a&amp;b = 0000 1100</span><br><span class="line"></span><br><span class="line">a|b = 0011 1101</span><br><span class="line"></span><br><span class="line">a^b = 0011 0001</span><br><span class="line"></span><br><span class="line">~a  = 1100 0011</span><br></pre></td></tr></table></figure>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:left">运算符</th>
+<th style="text-align:left">描述</th>
+<th style="text-align:left">实例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">&amp;</td>
+<td style="text-align:left">按位与运算符：参与运算的两个值,如果两个相应位都为1,则该位的结果为1,否则为0</td>
+<td style="text-align:left">(a &amp; b) 输出结果 12 ，二进制解释： 0000 1100</td>
+</tr>
+<tr>
+<td style="text-align:left">\</td>
+<td style="text-align:left"></td>
+<td style="text-align:left">按位或运算符：只要对应的二个二进位有一个为1时，结果位就为1。</td>
+<td>(a \</td>
+<td>b) 输出结果 61 ，二进制解释： 0011 1101</td>
+</tr>
+<tr>
+<td style="text-align:left">^</td>
+<td style="text-align:left">按位异或运算符：当两对应的二进位相异时，结果为1</td>
+<td style="text-align:left">(a ^ b) 输出结果 49 ，二进制解释： 0011 0001</td>
+</tr>
+<tr>
+<td style="text-align:left">~</td>
+<td style="text-align:left">按位取反运算符：对数据的每个二进制位取反,即把1变为0,把0变为1。<strong>~x</strong> 类似于 <strong>-x-1</strong></td>
+<td style="text-align:left">(~a ) 输出结果 -61 ，二进制解释： 1100 0011， 在一个有符号二进制数的补码形式。</td>
+</tr>
+<tr>
+<td style="text-align:left">&lt;&lt;</td>
+<td style="text-align:left">左移动运算符：运算数的各二进位全部左移若干位，由”&lt;&lt;”右边的数指定移动的位数，高位丢弃，低位补0。</td>
+<td style="text-align:left">a &lt;&lt; 2 输出结果 240 ，二进制解释： 1111 0000</td>
+</tr>
+<tr>
+<td style="text-align:left">&gt;&gt;</td>
+<td style="text-align:left">右移动运算符：把”&gt;&gt;”左边的运算数的各二进位全部右移若干位，”&gt;&gt;”右边的数指定移动的位数</td>
+<td style="text-align:left">a &gt;&gt; 2 输出结果 15 ，二进制解释： 0000 1111</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h1 id="Python中的流程控制"><a href="#Python中的流程控制" class="headerlink" title="Python中的流程控制"></a>Python中的流程控制</h1><p>1.python语句的分类<br>2.流程控制相关的分类<br>3.顺序结构<br>4.分支结构<br>5.循环结构<br>6.其他流程控制语句</p>
+<h3 id="1-python语句的分类"><a href="#1-python语句的分类" class="headerlink" title="1.python语句的分类"></a>1.python语句的分类</h3><pre><code>1.单行代码   一行的python代码
+2.代码块/组：
+以冒号作为开始，用缩进划分相同作用域，这样的结构称之为代码块，是一个整体。
+作用域是指作用范围。作用区域，使用了相同的缩进，即有相同的作用域。
+缩进：一个table距离或者四个空格。
+注意：代码块/组中严格区分空格和table，不能混合使用，必须只使用一种方式缩进！
+</code></pre><h3 id="2-流程控制的分类"><a href="#2-流程控制的分类" class="headerlink" title="2.流程控制的分类"></a>2.流程控制的分类</h3><pre><code>流程控制：对计算机执行代码的管控就是流程控制。
+
+分类：1.顺序结构 2.分支结构/选择结构 3.循环结构
+</code></pre><h3 id="3-顺序结构"><a href="#3-顺序结构" class="headerlink" title="3.顺序结构"></a>3.顺序结构</h3><pre><code>顺序结构是系统默认程序结构，自上而下执行
+</code></pre><h3 id="4-分支结构"><a href="#4-分支结构" class="headerlink" title="4.分支结构"></a>4.分支结构</h3><pre><code>结构代码
+    a.单项分支
+
+       if 条件表达式:
+            一条python代码
+            一条python代码
+            一条python代码
+            ...
+
+    b.双项分支
+        if 条件表达式：
+            一条python代码
+            一条python代码
+            一条python代码
+            ...
+        else:
+            一条python代码
+            一条python代码
+            一条python代码
+            ...
+
+    c.多项分支
+        if 条件表达式：
+            一条python代码
+            一条python代码
+            一条python代码
+            ...
+        elif 条件表达式：
+            一条python代码
+            一条python代码
+            一条python代码
+            ...
+        elif 条件表达式：
+            一条python代码
+            一条python代码
+            一条python代码
+            ...
+        ...
+        else:
+            一条python代码
+            一条python代码
+            一条python代码
+            ...
+
+    c.巢装分支
+        例子：
+        if 条件表达式：
+            代码语句
+            if 条件表达式:
+                代码语句
+            else:
+                代码语句
+        else：
+            代码语句
+</code></pre><h3 id="5-循环结构"><a href="#5-循环结构" class="headerlink" title="5.循环结构"></a>5.循环结构</h3><pre><code>必须熟练掌握！
+a.while型循环
+    基本结构：
+    while 条件表达式:
+        代码内容
+        代码内容
+        代码内容
+        ...
+
+    带有变化条件的循环
+    1.声明变量var
+    2.while 进行变量var的判断:
+        代码内容
+        代码内容
+        代码内容
+        ...
+        3.变量var的改变操作
+
+
+b.for..in循环(主要用于遍历容器类数据)
+    for 自定义变量 in 容器数据:
+        代码内容,可以使用自定义变量
+        代码内容,可以使用自定义变量
+        代码内容,可以使用自定义变量
+</code></pre><h3 id="else语句的应用"><a href="#else语句的应用" class="headerlink" title="else语句的应用"></a>else语句的应用</h3><pre><code>循环中可以使用else语句
+    while 条件表达式:
+        循环语句
+        循环语句
+        循环语句
+        ...
+    else:
+        代码语句
+        代码语句
+        代码语句
+        ...
+</code></pre><h3 id="其他的流程控制语句"><a href="#其他的流程控制语句" class="headerlink" title="其他的流程控制语句"></a>其他的流程控制语句</h3><pre><code>1.break语句
+2.continue语句
+3.pass语句
+</code></pre><h3 id="特殊语句："><a href="#特殊语句：" class="headerlink" title="特殊语句："></a>特殊语句：</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">1.exit()</span><br><span class="line">2.quit()</span><br><span class="line">用于结束程序的执行，exit()和quit()之后的代码不会执行。在单纯的循环结构中的作用与break很像，但绝不能混为一谈！！！</span><br></pre></td></tr></table></figure>
+
       
 
       
@@ -234,7 +911,29 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">python  基础入门</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/编程语言//" class="article-tag-list-link color5">编程语言</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
 
       
 
@@ -284,7 +983,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/tags/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2021/11/21/python%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -296,6 +995,25 @@
 </article>
 
   
+<nav id="article-nav">
+  
+    <a href="/2021/11/21/python%E6%A8%A1%E5%9D%97%E5%8C%96%E7%BC%96%E7%A8%8B/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          Python模块化编程
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2021/11/12/%E5%90%84%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95%E6%95%88%E7%8E%87%E6%B5%8B%E8%AF%95/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">各排序算法效率测试</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -310,10 +1028,33 @@
         </div>
         
         
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%AE%A4%E8%AF%86python%E8%84%9A%E6%9C%AC"><span class="toc-number">1.</span> <span class="toc-text">认识python脚本</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#pycharm%E4%BD%BF%E7%94%A8%E6%B3%A8%E6%84%8F"><span class="toc-number">1.0.0.1.</span> <span class="toc-text">pycharm使用注意</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%B3%A8%E9%87%8A"><span class="toc-number">1.0.0.2.</span> <span class="toc-text">注释</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#print-%E8%BE%93%E5%87%BA%E5%87%BD%E6%95%B0"><span class="toc-number">1.0.0.3.</span> <span class="toc-text">print()  输出函数</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%8F%98%E9%87%8F"><span class="toc-number">1.0.0.4.</span> <span class="toc-text">变量</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%91%BD%E5%90%8D%E8%A7%84%E8%8C%83"><span class="toc-number">1.0.0.5.</span> <span class="toc-text">命名规范</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%98%E9%87%8F%E7%9A%84%E5%AE%9A%E4%B9%89%E6%96%B9%E5%BC%8F"><span class="toc-number">1.0.1.</span> <span class="toc-text">变量的定义方式</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%80%9D%E8%80%83%EF%BC%9A%E5%A6%82%E4%BD%95%E5%AE%9E%E7%8E%B0-%E4%BB%A5%E4%B8%8B%E4%B8%A4%E4%B8%AA%E5%8F%98%E9%87%8F%E7%9A%84%E6%95%B0%E6%8D%AE%E7%9B%B8%E4%BA%92%E4%BA%A4%E6%8D%A2"><span class="toc-number">1.0.1.1.</span> <span class="toc-text">思考：如何实现 以下两个变量的数据相互交换</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#python%E7%9A%84%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="toc-number">1.1.</span> <span class="toc-text">python的数据类型</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BB%80%E4%B9%88%E6%98%AF%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%EF%BC%9F"><span class="toc-number">1.1.1.</span> <span class="toc-text">什么是数据类型？</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#type-%E5%87%BD%E6%95%B0%EF%BC%8C%E5%8F%AF%E4%BB%A5%E8%BF%94%E5%9B%9E%E5%BD%93%E5%89%8D%E7%9A%84%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="toc-number">1.1.1.1.</span> <span class="toc-text">type() 函数，可以返回当前的数据类型</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%B1%BB%E5%9E%8B"><span class="toc-number">1.1.2.</span> <span class="toc-text">1. 字符串类型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E6%95%B0%E5%AD%97%E7%B1%BB%E5%9E%8B"><span class="toc-number">1.1.3.</span> <span class="toc-text">2.数字类型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-List%E5%88%97%E8%A1%A8%E7%B1%BB%E5%9E%8B"><span class="toc-number">1.1.4.</span> <span class="toc-text">3.List列表类型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-tuple-%E5%85%83%E7%BB%84%E7%B1%BB%E5%9E%8B%E7%9A%84%E5%AE%9A%E4%B9%89"><span class="toc-number">1.1.5.</span> <span class="toc-text">4. tuple 元组类型的定义</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%B3%A8%E6%84%8F%E5%9C%A8%E5%AE%9A%E4%B9%89%E5%85%83%E7%BB%84%E6%97%B6%EF%BC%8C%E5%A6%82%E6%9E%9C%E5%85%83%E7%BB%84%E4%B8%AD%E5%8F%AA%E6%9C%89%E4%B8%80%E4%B8%AA%E5%85%83%E7%B4%A0%EF%BC%8C%E9%82%A3%E4%B9%88%E9%9C%80%E8%A6%81%E5%8A%A0-%E4%B8%8D%E7%84%B6%E5%B0%B1%E4%B8%8D%E6%98%AF%E5%85%83%E7%BB%84%E7%B1%BB%E5%9E%8B%E4%BA%86"><span class="toc-number">1.1.5.0.1.</span> <span class="toc-text">注意在定义元组时，如果元组中只有一个元素，那么需要加, 不然就不是元组类型了</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-Dict%E5%AD%97%E5%85%B8%E7%B1%BB%E5%9E%8B"><span class="toc-number">1.1.6.</span> <span class="toc-text">5.Dict字典类型</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#tip-%E5%9C%A8python%E4%B9%8B%E5%89%8D%E7%9A%84%E7%89%88%E6%9C%AC%E4%B8%AD%EF%BC%8C%E5%AD%97%E5%85%B8%E6%98%AF%E6%97%A0%E5%BA%8F%E7%9A%84"><span class="toc-number">1.1.6.0.1.</span> <span class="toc-text">tip: 在python之前的版本中，字典是无序的</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-set%E9%9B%86%E5%90%88%E7%B1%BB%E5%9E%8B"><span class="toc-number">1.1.7.</span> <span class="toc-text">6.set集合类型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%80%BB%E7%BB%93%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="toc-number">1.1.8.</span> <span class="toc-text">总结数据类型</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2"><span class="toc-number">1.2.</span> <span class="toc-text">数据类型转换</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%87%AA%E5%8A%A8%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2"><span class="toc-number">1.2.0.1.</span> <span class="toc-text">自动类型转换</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BC%BA%E5%88%B6%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2"><span class="toc-number">1.2.1.</span> <span class="toc-text">强制类型转换</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Python3-%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="toc-number">2.</span> <span class="toc-text">Python3 运算符</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BB%80%E4%B9%88%E6%98%AF%E8%BF%90%E7%AE%97%E7%AC%A6%EF%BC%9F"><span class="toc-number">2.1.</span> <span class="toc-text">什么是运算符？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Python%E7%AE%97%E6%9C%AF%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="toc-number">2.2.</span> <span class="toc-text">Python算术运算符</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Python%E6%AF%94%E8%BE%83%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="toc-number">2.3.</span> <span class="toc-text">Python比较运算符</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Python%E8%B5%8B%E5%80%BC%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="toc-number">2.4.</span> <span class="toc-text">Python赋值运算符</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Python%E4%BD%8D%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="toc-number">2.5.</span> <span class="toc-text">Python位运算符</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Python%E9%80%BB%E8%BE%91%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="toc-number">2.6.</span> <span class="toc-text">Python逻辑运算符</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Python%E6%88%90%E5%91%98%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="toc-number">2.7.</span> <span class="toc-text">Python成员运算符</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Python%E8%BA%AB%E4%BB%BD%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="toc-number">2.8.</span> <span class="toc-text">Python身份运算符</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Python%E8%BF%90%E7%AE%97%E7%AC%A6%E4%BC%98%E5%85%88%E7%BA%A7"><span class="toc-number">2.9.</span> <span class="toc-text">Python运算符优先级</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C%E8%BF%9B%E5%88%B6"><span class="toc-number">2.10.</span> <span class="toc-text">二进制</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%BF%9B%E5%88%B6%E8%BD%AC%E6%8D%A2"><span class="toc-number">2.11.</span> <span class="toc-text">进制转换</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8D%81%E8%BF%9B%E5%88%B6%E8%BD%AC%E6%8D%A2%E4%B8%BA%E4%BA%8C%E8%BF%9B%E5%88%B6"><span class="toc-number">2.11.1.</span> <span class="toc-text">十进制转换为二进制</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%8C%E8%BF%9B%E5%88%B6%E8%BD%AC%E6%8D%A2%E4%B8%BA%E5%8D%81%E8%BF%9B%E5%88%B6"><span class="toc-number">2.11.2.</span> <span class="toc-text">二进制转换为十进制</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Python%E4%BD%8D%E8%BF%90%E7%AE%97%E7%AC%A6-1"><span class="toc-number">2.12.</span> <span class="toc-text">Python位运算符</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Python%E4%B8%AD%E7%9A%84%E6%B5%81%E7%A8%8B%E6%8E%A7%E5%88%B6"><span class="toc-number">3.</span> <span class="toc-text">Python中的流程控制</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-python%E8%AF%AD%E5%8F%A5%E7%9A%84%E5%88%86%E7%B1%BB"><span class="toc-number">3.0.1.</span> <span class="toc-text">1.python语句的分类</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E6%B5%81%E7%A8%8B%E6%8E%A7%E5%88%B6%E7%9A%84%E5%88%86%E7%B1%BB"><span class="toc-number">3.0.2.</span> <span class="toc-text">2.流程控制的分类</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E9%A1%BA%E5%BA%8F%E7%BB%93%E6%9E%84"><span class="toc-number">3.0.3.</span> <span class="toc-text">3.顺序结构</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-%E5%88%86%E6%94%AF%E7%BB%93%E6%9E%84"><span class="toc-number">3.0.4.</span> <span class="toc-text">4.分支结构</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-%E5%BE%AA%E7%8E%AF%E7%BB%93%E6%9E%84"><span class="toc-number">3.0.5.</span> <span class="toc-text">5.循环结构</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#else%E8%AF%AD%E5%8F%A5%E7%9A%84%E5%BA%94%E7%94%A8"><span class="toc-number">3.0.6.</span> <span class="toc-text">else语句的应用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%B6%E4%BB%96%E7%9A%84%E6%B5%81%E7%A8%8B%E6%8E%A7%E5%88%B6%E8%AF%AD%E5%8F%A5"><span class="toc-number">3.0.7.</span> <span class="toc-text">其他的流程控制语句</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%89%B9%E6%AE%8A%E8%AF%AD%E5%8F%A5%EF%BC%9A"><span class="toc-number">3.0.8.</span> <span class="toc-text">特殊语句：</span></a></li></ol></li></ol></li></ol>
+                    </div>
+                </span>
+            </div>
+        </div>
+        
     </div>
 </aside>
 
 
+
+  
+  
+  
+
+  
+
+  
+
+  
 
 
           </div>
@@ -336,7 +1077,7 @@
 	var yiliaConfig = {
 		mathjax: [object Object],
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
