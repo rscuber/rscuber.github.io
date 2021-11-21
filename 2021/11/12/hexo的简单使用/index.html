@@ -193,6 +193,29 @@
         <a href="/2021/11/12/hexo%E7%9A%84%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8/" class="archive-article-date">
   	<time datetime="2021-11-11T17:12:31.380Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-11-12</time>
 </a>
+        <!-- 开始添加字数统计-->
+        
+          <div style="margin-top:10px;">
+    <span class="post-time">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-keyboard-o"></i>
+        <span class="post-meta-item-text">  字数统计: </span>
+        <span class="post-count">75字</span>
+      </span>
+    </span>
+
+    <!--<span class="post-time">
+      &nbsp; | &nbsp;
+      <span class="post-meta-item-icon">
+        <i class="fa fa-hourglass-half"></i>
+        <span class="post-meta-item-text">  阅读时长: </span>
+        <span class="post-count">1分</span>
+      </span>
+    </span>-->
+</div>
+
+          
+        <!-- 添加完成 -->
         
       </header>
     
@@ -400,14 +423,33 @@
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-left">
-    		&copy; 2021 John Doe
+    		<!--&copy; 2021 John Doe-->
+            <span id="timeDate">载入天数...</span><span id="times">载入时分秒...</span>
+<script>
+	var now = new Date();
+	function createtime() {
+		var grt= new Date("11/10/2021 00:00:00");//此处修改你的建站时间或者网站上线时间
+		now.setTime(now.getTime()+250);
+		days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days);
+		hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours);
+		if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum);
+		mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;}
+		seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum);
+		snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;}
+		document.getElementById("timeDate").innerHTML = "本站已安全运行 "+dnum+" 天 ";
+		document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒";
+	}
+	setInterval("createtime()",250);
+</script>
     	</div>
       	<div class="footer-right">
-      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+      		<!--<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by litten-->
+      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Blogs by <a href="https://www.worldcubeassociation.org/persons/2018YUAN15" target="_blank">袁成让</a>  
       	</div>
     </div>
   </div>
 </footer>
+
     </div>
     <script>
 	var yiliaConfig = {
@@ -520,11 +562,11 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">文学</a>
+                <a href="javascript:void(0)" class="js-tag color3">数据结构与算法</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">数据结构与算法</a>
+                <a href="javascript:void(0)" class="js-tag color3">文学</a>
               </li>
             
             <div class="clearfix"></div>
@@ -576,15 +618,7 @@ MathJax.Hub.Queue(function() {
         <ul class="search-ul">
           
             <li class="search-li">
-              <a href="http://github.com/rscuber" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>github</a>
-            </li>
-          
-            <li class="search-li">
-              <a href="http://leetcode-cn.com" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>leetcode</a>
-            </li>
-          
-            <li class="search-li">
-              <a href="https://www.nowcoder.com/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>nowcoder</a>
+              <a href="https://vimawesome.com/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>vim</a>
             </li>
           
             <li class="search-li">
@@ -592,7 +626,15 @@ MathJax.Hub.Queue(function() {
             </li>
           
             <li class="search-li">
+              <a href="https://www.latextemplates.com/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>latex</a>
+            </li>
+          
+            <li class="search-li">
               <a href="https://visualgo.net/zh" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>算法可视化</a>
+            </li>
+          
+            <li class="search-li">
+              <a href="http://www.mindline.cn/webapp" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>在线思维导图</a>
             </li>
           
         </ul>
