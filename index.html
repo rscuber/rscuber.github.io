@@ -591,6 +591,206 @@
 
 
   
+    <article id="post-C语言入门基础" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/archives/abea8fa2.html">C语言入门基础</a>
+    </h1>
+  
+
+        
+        <a href="/archives/abea8fa2.html" class="archive-article-date">
+  	<time datetime="2022-06-23T09:05:57.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-06-23</time>
+</a>
+        <!-- 开始添加字数统计-->
+        
+          <div style="margin-top:10px;">
+    <span class="post-time">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-keyboard-o"></i>
+        <span class="post-meta-item-text">  字数统计: </span>
+        <span class="post-count">445字</span>
+      </span>
+    </span>
+
+    <!--<span class="post-time">
+      &nbsp; | &nbsp;
+      <span class="post-meta-item-icon">
+        <i class="fa fa-hourglass-half"></i>
+        <span class="post-meta-item-text">  阅读时长: </span>
+        <span class="post-count">2分</span>
+      </span>
+    </span>-->
+</div>
+
+          
+        <!-- 添加完成 -->
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="C语言入门基础"><a href="#C语言入门基础" class="headerlink" title="C语言入门基础"></a>C语言入门基础</h1><h2 id="1-汇编与C语言"><a href="#1-汇编与C语言" class="headerlink" title="1. 汇编与C语言"></a>1. 汇编与C语言</h2><p><strong>汇编程序</strong><br><figure class="highlight x86asm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">	.file</span>	<span class="string">&quot;test.c&quot;</span></span><br><span class="line"><span class="meta">	.text</span></span><br><span class="line"><span class="meta">	.section</span>	.rodata</span><br><span class="line"><span class="symbol">.LC0:</span></span><br><span class="line"><span class="meta">	.string</span>	<span class="string">&quot;hello world&quot;</span></span><br><span class="line"><span class="meta">	.text</span></span><br><span class="line"><span class="meta">	.globl</span>	main</span><br><span class="line"><span class="meta">	.type</span>	main, @function</span><br><span class="line"><span class="symbol">main:</span></span><br><span class="line"><span class="symbol">.LFB0:</span></span><br><span class="line"><span class="meta">	.cfi_startproc</span></span><br><span class="line">	endbr64</span><br><span class="line">	pushq	%rbp</span><br><span class="line"><span class="meta">	.cfi_def_cfa_offset</span> <span class="number">16</span></span><br><span class="line"><span class="meta">	.cfi_offset</span> <span class="number">6</span>, -<span class="number">16</span></span><br><span class="line">	<span class="keyword">movq</span>	%rsp, %rbp</span><br><span class="line"><span class="meta">	.cfi_def_cfa_register</span> <span class="number">6</span></span><br><span class="line">	leaq	.LC0(%rip), %rdi</span><br><span class="line">	<span class="keyword">call</span>	puts@PLT</span><br><span class="line">	movl	<span class="number">$0</span>, %eax</span><br><span class="line">	popq	%rbp</span><br><span class="line"><span class="meta">	.cfi_def_cfa</span> <span class="number">7</span>, <span class="number">8</span></span><br><span class="line">	<span class="keyword">ret</span></span><br><span class="line"><span class="meta">	.cfi_endproc</span></span><br><span class="line"><span class="symbol">.LFE0:</span></span><br><span class="line"><span class="meta">	.size</span>	main, .-main</span><br><span class="line"><span class="meta">	.ident</span>	<span class="string">&quot;GCC: (Ubuntu 9.3.0-17ubuntu1~20.04) 9.3.0&quot;</span></span><br><span class="line"><span class="meta">	.section</span>	.note<span class="number">.</span>GNU-stack,<span class="string">&quot;&quot;</span>,@progbits</span><br><span class="line"><span class="meta">	.section</span>	.note<span class="number">.</span>gnu<span class="number">.</span>property,<span class="string">&quot;a&quot;</span></span><br><span class="line"><span class="meta">	.align</span> <span class="number">8</span></span><br><span class="line"><span class="meta">	.long</span>	 1f - 0f</span><br><span class="line"><span class="meta">	.long</span>	 4f - 1f</span><br><span class="line"><span class="meta">	.long</span>	 <span class="number">5</span></span><br><span class="line"><span class="number">0</span>:</span><br><span class="line"><span class="meta">	.string</span>	 <span class="string">&quot;GNU&quot;</span></span><br><span class="line"><span class="number">1</span>:</span><br><span class="line"><span class="meta">	.align</span> <span class="number">8</span></span><br><span class="line"><span class="meta">	.long</span>	 <span class="number">0xc0000002</span></span><br><span class="line"><span class="meta">	.long</span>	 3f - 2f</span><br><span class="line"><span class="number">2</span>:</span><br><span class="line"><span class="meta">	.long</span>	 <span class="number">0x3</span></span><br><span class="line"><span class="number">3</span>:</span><br><span class="line"><span class="meta">	.align</span> <span class="number">8</span></span><br><span class="line"><span class="number">4</span>:</span><br></pre></td></tr></table></figure></p>
+<p><strong>C语言程序</strong></p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;hello world\n&quot;</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><strong>汇编与C语言的比较</strong></p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:center">汇编</th>
+<th style="text-align:center">C语言</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">强依赖于硬件设备-寄存器</td>
+<td style="text-align:center">可移植性好</td>
+</tr>
+<tr>
+<td style="text-align:center">直接与寄存器等沟通，代码复杂，执行效率更高</td>
+<td style="text-align:center">简单、可读、开发效率高</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><strong>思考</strong></p>
+<blockquote>
+<p>程序本质上是在控制计算机的计算资源和存储资源，越复杂的语言一般越能够精细化的控制计算资源和存储资源。</p>
+</blockquote>
+<h2 id="2-输入与输出函数"><a href="#2-输入与输出函数" class="headerlink" title="2. 输入与输出函数"></a>2. 输入与输出函数</h2><div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:left"></th>
+<th style="text-align:left">输入函数</th>
+<th style="text-align:left">输出函数</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">头文件</td>
+<td style="text-align:left">stdio.h</td>
+<td style="text-align:left">stdio.h</td>
+</tr>
+<tr>
+<td style="text-align:left">原型</td>
+<td style="text-align:left">int scanf(const char *format, …)</td>
+<td style="text-align:left">int printf(const char *format, …)</td>
+</tr>
+<tr>
+<td style="text-align:left">返回值</td>
+<td style="text-align:left">成功读入的参数个数, &lt;0，不合法</td>
+<td style="text-align:left">成功输出的字符数</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><strong>format:格式化控制字符串</strong><br><strong>…:可变参数列表</strong></p>
+<p><strong>思考</strong></p>
+<blockquote>
+<p>发现现有技术与自己所掌握的知识体系有冲突，解释冲突的过程就是学习新技术的过程</p>
+</blockquote>
+<p><strong>注意</strong><br><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> ret = <span class="built_in">scanf</span>(<span class="string">&quot;abc&quot;</span>);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;ret = %d\n&quot;</span>, ret);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;EOF = %d\n&quot;</span>, EOF);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p><strong>输出结果</strong><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ret = 0</span><br><span class="line">EOF = -1</span><br></pre></td></tr></table></figure></p>
+<p><strong>结论</strong></p>
+<blockquote>
+<p>scanf返回值为0也是合法的。<br>EOF是个宏定义常量，值为-1，代表文件末尾(End Of File)</p>
+</blockquote>
+<p><img src="https://cdn.jsdelivr.net/gh/rscuber/PicX@master/C_basic/Screen-Shot-2022-06-23-at-1.4p8a2er9jpu0.webp" alt="EOF的定义"></p>
+
+      
+
+<!- 百度自动推送方式提交 -->
+
+  <script>
+  (function(){
+      var bp = document.createElement('script');
+      var curProtocol = window.location.protocol.split(':')[0];
+      if (curProtocol === 'https') {
+          bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+      }
+      else {
+          bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+      }
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(bp, s);
+  })();
+  </script>
+
+<!- 百度自动推送方式提交结束 -->
+
+
+
+  <div class="declare" hidden="hidden"></div>
+
+
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">C语言</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/C语言//" class="article-tag-list-link color4">C语言</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/archives/abea8fa2.html">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-考研英语高频词汇每日一词" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -1390,143 +1590,6 @@
 
 
   
-    <article id="post-月亮与六便士" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/archives/b56c83b9.html">月亮与六便士</a>
-    </h1>
-  
-
-        
-        <a href="/archives/b56c83b9.html" class="archive-article-date">
-  	<time datetime="2021-11-28T15:15:55.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-11-28</time>
-</a>
-        <!-- 开始添加字数统计-->
-        
-          <div style="margin-top:10px;">
-    <span class="post-time">
-      <span class="post-meta-item-icon">
-        <i class="fa fa-keyboard-o"></i>
-        <span class="post-meta-item-text">  字数统计: </span>
-        <span class="post-count">9字</span>
-      </span>
-    </span>
-
-    <!--<span class="post-time">
-      &nbsp; | &nbsp;
-      <span class="post-meta-item-icon">
-        <i class="fa fa-hourglass-half"></i>
-        <span class="post-meta-item-text">  阅读时长: </span>
-        <span class="post-count">1分</span>
-      </span>
-    </span>-->
-</div>
-
-          
-        <!-- 添加完成 -->
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        some sentences that make people think
-        
-      
-
-<!- 百度自动推送方式提交 -->
-
-  <script>
-  (function(){
-      var bp = document.createElement('script');
-      var curProtocol = window.location.protocol.split(':')[0];
-      if (curProtocol === 'https') {
-          bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
-      }
-      else {
-          bp.src = 'http://push.zhanzhang.baidu.com/push.js';
-      }
-      var s = document.getElementsByTagName("script")[0];
-      s.parentNode.insertBefore(bp, s);
-  })();
-  </script>
-
-<!- 百度自动推送方式提交结束 -->
-
-
-
-  <div class="declare" hidden="hidden"></div>
-
-
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">文学</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">文摘</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/文摘//" class="article-tag-list-link color3">文摘</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/archives/b56c83b9.html">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
     <nav id="page-nav">
       <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">下一页</a>
@@ -1678,11 +1741,7 @@ MathJax.Hub.Queue(function() {
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Python</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">基础入门</a>
+                <a href="javascript:void(0)" class="js-tag color4">C语言</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1698,7 +1757,19 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Python</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">基础入门</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">算法</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">数据结构与算法</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1719,10 +1790,6 @@ MathJax.Hub.Queue(function() {
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">长难句</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">数据结构与算法</a>
               </li>
              
               <li class="article-tag-list-item">
