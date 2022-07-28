@@ -613,7 +613,7 @@
       <span class="post-meta-item-icon">
         <i class="fa fa-keyboard-o"></i>
         <span class="post-meta-item-text">  字数统计: </span>
-        <span class="post-count">445字</span>
+        <span class="post-count">1.5k字</span>
       </span>
     </span>
 
@@ -622,7 +622,7 @@
       <span class="post-meta-item-icon">
         <i class="fa fa-hourglass-half"></i>
         <span class="post-meta-item-text">  阅读时长: </span>
-        <span class="post-count">2分</span>
+        <span class="post-count">6分</span>
       </span>
     </span>-->
 </div>
@@ -661,9 +661,60 @@
 <blockquote>
 <ul>
 <li>第一种通过节点地址实现，第二种通过数组下标实现(输出结果相同)</li>
-<li>思想一样，实现方式不</li>
+<li>思想一样，实现方式不一样</li>
 </ul>
 </blockquote>
+<h2 id="链表的典型应用场景"><a href="#链表的典型应用场景" class="headerlink" title="链表的典型应用场景"></a>链表的典型应用场景</h2><h3 id="操作系统内的动态内存分配"><a href="#操作系统内的动态内存分配" class="headerlink" title="操作系统内的动态内存分配"></a>操作系统内的动态内存分配</h3><p><img src="https://cdn.staticaly.com/gh/rscuber/PicX@master/C_basic/Screen-Shot-2022-07-28-at-9.75l5qhdc5p00.webp" alt="操作系统内的动态内存分配"></p>
+<p><strong>思考</strong></p>
+<blockquote>
+<p>操作系统通过链表来管理动态内存分配后剩余的内存碎片</p>
+</blockquote>
+<h3 id="LRU缓存淘汰算法"><a href="#LRU缓存淘汰算法" class="headerlink" title="LRU缓存淘汰算法"></a>LRU缓存淘汰算法</h3><p><img src="https://cdn.staticaly.com/gh/rscuber/PicX@master/C_basic/Screen-Shot-2022-07-28-at-9.579juhynxaw0.webp" alt="LRU缓存淘汰算法"></p>
+<p><img src="https://cdn.staticaly.com/gh/rscuber/PicX@master/C_basic/Screen-Shot-2022-07-28-at-9.3tckzvdmfq00.webp" alt="哈希表"></p>
+<p><strong>思考</strong></p>
+<blockquote>
+<ul>
+<li>LRU = Least Recently Used（近期最少使用），底层是由哈希链表实现的。</li>
+<li>缓存是高速设备对低速设备的一种结构</li>
+<li>设备间存在速度差异，可以通过将使用较多的数据存放在高速区域，而将使用较少的内容存放在相对低速的区域的方式，来对系统进行优化。</li>
+</ul>
+</blockquote>
+<h2 id="经典面试题-链表的访问"><a href="#经典面试题-链表的访问" class="headerlink" title="经典面试题-链表的访问"></a>经典面试题-链表的访问</h2><h3 id="LeetCode-141-环形链表"><a href="#LeetCode-141-环形链表" class="headerlink" title="LeetCode 141.环形链表"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/linked-list-cycle/">LeetCode 141.环形链表</a></h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Definition for singly-linked list.</span></span><br><span class="line"><span class="comment"> * struct ListNode &#123;</span></span><br><span class="line"><span class="comment"> *     int val;</span></span><br><span class="line"><span class="comment"> *     ListNode *next;</span></span><br><span class="line"><span class="comment"> *     ListNode(int x) : val(x), next(NULL) &#123;&#125;</span></span><br><span class="line"><span class="comment"> * &#125;;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="comment">//解法一(哈希表)</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">bool</span> <span class="title">hasCycle</span><span class="params">(ListNode *head)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (head == <span class="literal">NULL</span>) <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">        unordered_set&lt;ListNode *&gt; s;</span><br><span class="line">        <span class="keyword">for</span> (ListNode *p = head; p; p = p-&gt;next) &#123;</span><br><span class="line">            <span class="keyword">if</span> (s.<span class="built_in">count</span>(p)) <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">            s.<span class="built_in">insert</span>(p);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">//解法二(快慢指针)</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">bool</span> <span class="title">hasCycle</span><span class="params">(ListNode *head)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (head == <span class="literal">NULL</span>) <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">        ListNode *fast = head, *slow = head;</span><br><span class="line">        <span class="keyword">while</span> (fast &amp;&amp; fast-&gt;next) &#123;</span><br><span class="line">            slow = slow-&gt;next;<span class="comment">//慢指针每次走一步</span></span><br><span class="line">            fast = fast-&gt;next-&gt;next;<span class="comment">//快指针每次走两步</span></span><br><span class="line">            <span class="keyword">if</span> (slow == fast) <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<p><strong>思考</strong></p>
+<blockquote>
+<p>解法一(哈希表)</p>
+<ul>
+<li>我们可以使用哈希表来存储所有已经访问过的节点。每次我们到达一个节点，如果该节点已经存在于哈希表中，则说明该链表是环形链表，否则就将该节点加入哈希表中。重复这一过程，直到我们遍历完整个链表即可。</li>
+</ul>
+<p>解法二(快慢指针)</p>
+<ul>
+<li>我们定义两个指针，一快一满。慢指针每次只移动一步，而快指针每次移动两步。如果在移动的过程中，快指针反过来追上慢指针，就说明该链表为环形链表。否则快指针将到达链表尾部，该链表不为环形链表。</li>
+</ul>
+</blockquote>
+<h3 id="LeetCode-142-环状链表II"><a href="#LeetCode-142-环状链表II" class="headerlink" title="LeetCode 142.环状链表II"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/linked-list-cycle-ii/">LeetCode 142.环状链表II</a></h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Definition for singly-linked list.</span></span><br><span class="line"><span class="comment"> * struct ListNode &#123;</span></span><br><span class="line"><span class="comment"> *     int val;</span></span><br><span class="line"><span class="comment"> *     ListNode *next;</span></span><br><span class="line"><span class="comment"> *     ListNode(int x) : val(x), next(NULL) &#123;&#125;</span></span><br><span class="line"><span class="comment"> * &#125;;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="comment">//解法一(哈希表)</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function">ListNode *<span class="title">detectCycle</span><span class="params">(ListNode *head)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (head == <span class="literal">NULL</span>) <span class="keyword">return</span> <span class="literal">NULL</span>;</span><br><span class="line">        unordered_set&lt;ListNode *&gt; s;</span><br><span class="line">        <span class="keyword">for</span> (ListNode *p = head; p; p = p-&gt;next) &#123;</span><br><span class="line">            <span class="keyword">if</span> (s.<span class="built_in">count</span>(p)) <span class="keyword">return</span> p;</span><br><span class="line">            s.<span class="built_in">insert</span>(p);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">NULL</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">//解法二(快慢指针)</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function">ListNode *<span class="title">detectCycle</span><span class="params">(ListNode *head)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (head == <span class="literal">NULL</span> || head-&gt;next == <span class="literal">NULL</span>) <span class="keyword">return</span> <span class="literal">NULL</span>;</span><br><span class="line">        ListNode *fast = head, *slow = head;</span><br><span class="line">        <span class="keyword">do</span> &#123;</span><br><span class="line">            slow = slow-&gt;next;<span class="comment">//慢指针每次走一步</span></span><br><span class="line">            fast = fast-&gt;next-&gt;next;<span class="comment">//快指针每次走两步</span></span><br><span class="line">        &#125; <span class="keyword">while</span> (fast != slow &amp;&amp; fast &amp;&amp; fast-&gt;next);</span><br><span class="line">        <span class="keyword">if</span> (fast == <span class="literal">NULL</span> || fast-&gt;next == <span class="literal">NULL</span>) <span class="keyword">return</span> <span class="literal">NULL</span>;<span class="comment">//此时无环</span></span><br><span class="line">        ListNode *ptr = head;<span class="comment">//此时slow与fast在环中相遇</span></span><br><span class="line">        <span class="keyword">while</span> (ptr != slow) &#123;</span><br><span class="line">            ptr = ptr-&gt;next;</span><br><span class="line">            slow = slow-&gt;next;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> ptr;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<p><strong>思考</strong></p>
+<blockquote>
+<p>解法一(哈希表)</p>
+<ul>
+<li>我们遍历链表中的每个节点，并将它记录在哈希表中；一旦遇到了此前遍历过的节点，就可以判定链表中存在环，然后返回该节点。否则，返回空地址。</li>
+</ul>
+<p>解法二(快慢指针)</p>
+<ul>
+<li>当发现 $\textit{slow}$ 与 $\textit{fast}$ 相遇时，我们再额外使用一个指针 $\textit{ptr}$。起始，它指向链表头部；随后，它和 $\textit{slow}$ 每次向后移动一个位置。最终，它们会在入环点相遇。</li>
+<li>详细证明可以参考<a target="_blank" rel="noopener" href="https://leetcode.cn/problems/linked-list-cycle-ii/solution/huan-xing-lian-biao-ii-by-leetcode-solution/">LeetCode官方题解</a></li>
+</ul>
+</blockquote>
+<h3 id="LeetCode-202-快乐数"><a href="#LeetCode-202-快乐数" class="headerlink" title="LeetCode 202.快乐数"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/happy-number/">LeetCode 202.快乐数</a></h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">getNext</span><span class="params">(<span class="keyword">int</span> x)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> sum = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">while</span> (x) &#123;</span><br><span class="line">            sum += <span class="built_in">pow</span>(x % <span class="number">10</span>, <span class="number">2</span>);</span><br><span class="line">            x /= <span class="number">10</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> sum;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">bool</span> <span class="title">isHappy</span><span class="params">(<span class="keyword">int</span> n)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> fast = n, slow = n;</span><br><span class="line">        <span class="keyword">do</span> &#123;</span><br><span class="line">            slow = <span class="built_in">getNext</span>(slow);<span class="comment">//慢指针每次走一步</span></span><br><span class="line">            fast = <span class="built_in">getNext</span>(<span class="built_in">getNext</span>(fast));<span class="comment">//快指针每次走两步</span></span><br><span class="line">        &#125; <span class="keyword">while</span> (fast != slow &amp;&amp; slow != <span class="number">1</span>);</span><br><span class="line">        <span class="keyword">return</span> slow == <span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<p><strong>思考</strong></p>
+<blockquote>
+<ul>
+<li>转化为判断链表是否有环的问题。若遍历到重复的数字代表有环，不是快乐数；若遍历到1(相当于空节点)，则说明无环，是快乐数。</li>
+<li>一个数字经过变换规则唯一指向了另一个数字。所谓链表思维就是经过一个变换规则唯一指向了下一个节点。</li>
+<li>收敛性的证明: 32位int的表示正整数大概是21亿($2^{31} - 1$), 在这个范围内 各位数字平方和最大的数是1999999999 和为730,根据鸽巢原理（pigeonhole’s principle，也译作抽屉原理）,在730次循环后必定出现重复</li>
+</ul>
+</blockquote>
+<h3 id=""><a href="#" class="headerlink" title=""></a><a href=""></a></h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
+<p><strong>思考</strong></p>
 
       
 
@@ -1682,15 +1733,15 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Markdown</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">Hexo</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">工具</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Markdown</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1718,10 +1769,6 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">数据结果与算法</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">文摘</a>
               </li>
              
@@ -1731,6 +1778,10 @@ MathJax.Hub.Queue(function() {
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">高频词汇</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">数据结果与算法</a>
               </li>
              
               <li class="article-tag-list-item">
