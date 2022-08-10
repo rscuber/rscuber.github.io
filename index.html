@@ -613,7 +613,7 @@
       <span class="post-meta-item-icon">
         <i class="fa fa-keyboard-o"></i>
         <span class="post-meta-item-text">  字数统计: </span>
-        <span class="post-count">1.5k字</span>
+        <span class="post-count">2.3k字</span>
       </span>
     </span>
 
@@ -622,7 +622,7 @@
       <span class="post-meta-item-icon">
         <i class="fa fa-hourglass-half"></i>
         <span class="post-meta-item-text">  阅读时长: </span>
-        <span class="post-count">6分</span>
+        <span class="post-count">10分</span>
       </span>
     </span>-->
 </div>
@@ -713,7 +713,31 @@
 <li>收敛性的证明: 32位int的表示正整数大概是21亿($2^{31} - 1$), 在这个范围内 各位数字平方和最大的数是1999999999 和为730,根据鸽巢原理（pigeonhole’s principle，也译作抽屉原理）,在730次循环后必定出现重复</li>
 </ul>
 </blockquote>
+<h3 id="LeetCode-206-反转链表"><a href="#LeetCode-206-反转链表" class="headerlink" title="LeetCode 206.反转链表"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/reverse-linked-list/">LeetCode 206.反转链表</a></h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Definition for singly-linked list.</span></span><br><span class="line"><span class="comment"> * struct ListNode &#123;</span></span><br><span class="line"><span class="comment"> *     int val;</span></span><br><span class="line"><span class="comment"> *     ListNode *next;</span></span><br><span class="line"><span class="comment"> *     ListNode() : val(0), next(nullptr) &#123;&#125;</span></span><br><span class="line"><span class="comment"> *     ListNode(int x) : val(x), next(nullptr) &#123;&#125;</span></span><br><span class="line"><span class="comment"> *     ListNode(int x, ListNode *next) : val(x), next(next) &#123;&#125;</span></span><br><span class="line"><span class="comment"> * &#125;;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//解法一(迭代，带头节点)</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function">ListNode* <span class="title">reverseList</span><span class="params">(ListNode* head)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (head == <span class="literal">nullptr</span>) <span class="keyword">return</span> head;</span><br><span class="line">        ListNode newHead;</span><br><span class="line">        ListNode *cur = head, *q;</span><br><span class="line">        <span class="keyword">while</span> (cur) &#123;</span><br><span class="line">            <span class="comment">//头插法，将cur插入到新链表的头部</span></span><br><span class="line">            q = cur-&gt;next;</span><br><span class="line">            cur-&gt;next = newHead.next;</span><br><span class="line">            newHead.next = cur;</span><br><span class="line">            cur = q;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> newHead.next;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">//解法二(迭代，不带头节点)</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function">ListNode* <span class="title">reverseList</span><span class="params">(ListNode* head)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (head == <span class="literal">nullptr</span>) <span class="keyword">return</span> head;</span><br><span class="line">        ListNode *newHead = <span class="literal">nullptr</span>;</span><br><span class="line">        ListNode *cur = head, *q = head-&gt;next;</span><br><span class="line">        <span class="keyword">while</span> (cur) &#123;</span><br><span class="line">            cur-&gt;next = newHead;</span><br><span class="line">            newHead = cur;</span><br><span class="line">            (cur = q) &amp;&amp; (q = q-&gt;next); <span class="comment">//短路原则</span></span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> newHead;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">//解法三(递归)</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function">ListNode* <span class="title">reverseList</span><span class="params">(ListNode* head)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (head == <span class="literal">nullptr</span> || head-&gt;next == <span class="literal">nullptr</span>) <span class="keyword">return</span> head;</span><br><span class="line">        ListNode *tail = head-&gt;next, *newHead = <span class="built_in">reverseList</span>(head-&gt;next);</span><br><span class="line">        <span class="comment">//将head插入到链表反转后的尾部</span></span><br><span class="line">        head-&gt;next = tail-&gt;next;</span><br><span class="line">        tail-&gt;next = head;</span><br><span class="line">        <span class="keyword">return</span> newHead;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<p><strong>思考</strong></p>
+<blockquote>
+<p>$newHead$ 记录的是反转链表后的新头节点，$cur$ 记录的是链表反转之前的头节点，$q$ 记录的是链表反转之前头节点的下一个节点。</p>
+</blockquote>
+<h2 id="递归实现反转链表"><a href="#递归实现反转链表" class="headerlink" title="递归实现反转链表"></a>递归实现反转链表</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//逆序输出链表的值</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">reversePrint</span><span class="params">(Node *p)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (p == <span class="literal">nullptr</span>) <span class="keyword">return</span> ;</span><br><span class="line">    <span class="built_in">reverse</span>(p-&gt;next);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%d-&gt;&quot;</span>, p-&gt;data);</span><br><span class="line">    <span class="keyword">return</span> ;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//反转链表的前n个节点</span></span><br><span class="line"><span class="function">Node *<span class="title">reverseN</span><span class="params">(Node *head, <span class="keyword">int</span> n)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (n == <span class="number">1</span> || head == <span class="literal">nullptr</span>) <span class="keyword">return</span> head;</span><br><span class="line">    Node *tail = head-&gt;next, *newHead = <span class="built_in">reverseN</span>(head-&gt;next, n - <span class="number">1</span>);</span><br><span class="line">    head-&gt;next = tail-&gt;next;</span><br><span class="line">    tail-&gt;next = head;</span><br><span class="line">    <span class="keyword">return</span> newHead;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="LeetCode-92-反转链表II"><a href="#LeetCode-92-反转链表II" class="headerlink" title="LeetCode 92.反转链表II"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/reverse-linked-list-ii/">LeetCode 92.反转链表II</a></h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Definition for singly-linked list.</span></span><br><span class="line"><span class="comment"> * struct ListNode &#123;</span></span><br><span class="line"><span class="comment"> *     int val;</span></span><br><span class="line"><span class="comment"> *     ListNode *next;</span></span><br><span class="line"><span class="comment"> *     ListNode() : val(0), next(nullptr) &#123;&#125;</span></span><br><span class="line"><span class="comment"> *     ListNode(int x) : val(x), next(nullptr) &#123;&#125;</span></span><br><span class="line"><span class="comment"> *     ListNode(int x, ListNode *next) : val(x), next(next) &#123;&#125;</span></span><br><span class="line"><span class="comment"> * &#125;;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//(解法一)</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function">ListNode *<span class="title">reverseN</span><span class="params">(ListNode *head, <span class="keyword">int</span> n)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (n == <span class="number">1</span> || head == <span class="literal">nullptr</span>) <span class="keyword">return</span> head;</span><br><span class="line">        ListNode *tail = head-&gt;next, *newHead = <span class="built_in">reverseN</span>(head-&gt;next, n - <span class="number">1</span>);</span><br><span class="line">        head-&gt;next = tail-&gt;next;</span><br><span class="line">        tail-&gt;next = head;</span><br><span class="line">        <span class="keyword">return</span> newHead;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function">ListNode* <span class="title">reverseBetween</span><span class="params">(ListNode* head, <span class="keyword">int</span> left, <span class="keyword">int</span> right)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (head == <span class="literal">nullptr</span>) <span class="keyword">return</span> head;</span><br><span class="line">        <span class="keyword">int</span> cnt = left;</span><br><span class="line">        <span class="function">ListNode <span class="title">ret</span><span class="params">(<span class="number">0</span>, head)</span>, *pre </span>= &amp;ret;</span><br><span class="line">        <span class="keyword">while</span> (--cnt) pre = pre-&gt;next; <span class="comment">//pre为待反转链表区间的前一个节点</span></span><br><span class="line">        pre-&gt;next = <span class="built_in">reverseN</span>(pre-&gt;next, right - left + <span class="number">1</span>);</span><br><span class="line">        <span class="keyword">return</span> ret.next;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">//(解法二)</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function">ListNode* <span class="title">reverseBetween</span><span class="params">(ListNode* head, <span class="keyword">int</span> left, <span class="keyword">int</span> right)</span> </span>&#123;</span><br><span class="line">        <span class="function">ListNode <span class="title">ret</span><span class="params">(<span class="number">0</span>, head)</span>, *pre </span>= &amp;ret, *cur, *n;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; left - <span class="number">1</span>; i++) &#123;</span><br><span class="line">            pre = pre-&gt;next; <span class="comment">//pre为待反转链表区间的前一个节点</span></span><br><span class="line">        &#125;</span><br><span class="line">        cur = pre-&gt;next, n = cur-&gt;next;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = left + <span class="number">1</span>; i &lt;= right; i++, n = cur-&gt;next) &#123;</span><br><span class="line">            cur-&gt;next = n-&gt;next; <span class="comment">//将cur与n的下一个节点连接起来</span></span><br><span class="line">            n-&gt;next = pre-&gt;next; <span class="comment">//将n插入到反转链表的头部</span></span><br><span class="line">            pre-&gt;next = n;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> ret.next;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<p><strong>思考</strong></p>
+<blockquote>
+<ul>
+<li><p>(解法一，递归)先找到待反转链表区间的前一个节点，在利用 $reverseN$ 反转 $right - left + 1$个节点。</p>
+</li>
+<li><p>(解法二，迭代)在需要反转的区间里，每遍历到一个节点，让这个新节点来到反转部分的起始位置。</p>
+</li>
+<li>$cur$：指向待反转区域的第一个节点 $left$。</li>
+<li>$next$：永远指向 $cur$ 的下一个节点，循环过程中，$cur$ 变化以后 $next$ 会变化。</li>
+<li>$pre$：永远指向待反转区域的第一个节点 $left$ 的前一个节点，在循环过程中不变。</li>
+</ul>
+</blockquote>
 <h3 id=""><a href="#" class="headerlink" title=""></a><a href=""></a></h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
+<p><strong>思考</strong></p>
+<h3 id="-1"><a href="#-1" class="headerlink" title=""></a><a href=""></a></h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
+<p><strong>思考</strong></p>
+<h3 id="-2"><a href="#-2" class="headerlink" title=""></a><a href=""></a></h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
 <p><strong>思考</strong></p>
 
       
@@ -1019,7 +1043,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">数据结果与算法</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">数据结构与算法</a>
         		</li>
       		
 		</ul>
@@ -1733,7 +1757,15 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Markdown</a>
+                <a href="javascript:void(0)" class="js-tag color2">Python</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">基础入门</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">数据结构与算法</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1745,19 +1777,7 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Python</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">基础入门</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">算法</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">数据结构与算法</a>
+                <a href="javascript:void(0)" class="js-tag color4">Markdown</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1769,6 +1789,10 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">算法</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">文摘</a>
               </li>
              
@@ -1777,15 +1801,11 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">高频词汇</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">数据结果与算法</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">长难句</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">高频词汇</a>
               </li>
             
             <div class="clearfix"></div>
