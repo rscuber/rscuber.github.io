@@ -29,7 +29,7 @@
 <meta property="og:image" content="https://cdn.staticaly.com/gh/rscuber/PicX@master/C_basic/Screen-Shot-2022-07-21-at-1.gq0wq3lc1hc.webp">
 <meta property="og:image" content="https://cdn.staticaly.com/gh/rscuber/PicX@master/C_basic/Screen-Shot-2022-07-21-at-1.61gaqvpcw640.webp">
 <meta property="article:published_time" content="2022-07-18T15:40:15.000Z">
-<meta property="article:modified_time" content="2022-08-14T13:51:46.516Z">
+<meta property="article:modified_time" content="2022-08-14T13:57:14.284Z">
 <meta property="article:author" content="袁成让">
 <meta property="article:tag" content="数据结构与算法">
 <meta name="twitter:card" content="summary">
@@ -345,7 +345,7 @@
 <p><strong>思考</strong></p>
 <blockquote>
 <ul>
-<li>给每个节点一个 $position$ 值，如果我们走向左子树，那么 $position -&gt; position <em> 2$，如果我们走向右子树，那么 $position -&gt; positon </em> 2 + 1$。当我们在看同一层深度的位置值 $L$ 和 $R$ 的时候，宽度就是 $R - L + 1$。</li>
+<li>给每个节点一个 $position$ 值，如果我们走向左子树，那么 $position -&gt; position \times 2$，如果我们走向右子树，那么 $position -&gt; positon \times 2 + 1$。当我们在看同一层深度的位置值 $L$ 和 $R$ 的时候，宽度就是 $R - L + 1$。</li>
 <li>广度优先搜索顺序遍历每个节点的过程中，我们记录节点的 $position$ 信息，对于每一个深度，第一个遇到的节点是最左边的节点，最后一个到达的节点是最右边的节点。</li>
 </ul>
 </blockquote>
@@ -368,10 +368,10 @@
 <p>动态规划(同样根据归纳法)</p>
 <ul>
 <li>状态定义：$dp[i][j]$ 表示: $i=0/1 \implies$ 父节点 不放/放 摄像头，$j=0/1 \implies$  当前节点 不放/放 摄像头时，当前节点所在子树所需的最少摄像头数量。</li>
-<li>$dp[0][0]$: 父节点不放摄像头，当前节点不放摄像头时，当前节点所在子树所需的最少摄像头数量。</li>
-<li>$dp[0][1]$: 父节点不放摄像头，当前节点放摄像头时，当前节点所在子树所需的最少摄像头数量。</li>
-<li>$dp[1][0]$: 父节点放摄像头，当前节点不放摄像头时，当前节点所在子树所需的最少摄像头数量。</li>
-<li><p>$dp[1][1]$: 父节点放摄像头，当前节点放摄像头时，当前节点所在子树所需的最少摄像头数量。</p>
+<li>$dp[0][0]$: 父节点 <strong>不放</strong> 摄像头，当前节点 <strong>不放</strong> 摄像头时，当前节点所在子树所需的最少摄像头数量。</li>
+<li>$dp[0][1]$: 父节点 <strong>不放</strong> 摄像头，当前节点 <strong>放</strong> 摄像头时，当前节点所在子树所需的最少摄像头数量。</li>
+<li>$dp[1][0]$: 父节点 <strong>放</strong> 摄像头，当前节点 <strong>不放</strong> 摄像头时，当前节点所在子树所需的最少摄像头数量。</li>
+<li><p>$dp[1][1]$: 父节点 <strong>放</strong> 摄像头，当前节点 <strong>放</strong> 摄像头时，当前节点所在子树所需的最少摄像头数量。</p>
 </li>
 <li><p>所谓的状态转移就是将所有决定 $dp[i][j]$ 最优值的状态放入决策过程中。可结合状态定义图解和来理解程序中的状态转移方程。</p>
 </li>
@@ -770,11 +770,11 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">算法</a>
+                <a href="javascript:void(0)" class="js-tag color3">数据结构与算法</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">数据结构与算法</a>
+                <a href="javascript:void(0)" class="js-tag color3">算法</a>
               </li>
              
               <li class="article-tag-list-item">
