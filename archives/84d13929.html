@@ -6,15 +6,27 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://rscuber.github.io">
-  <title>Tag: 数据结构与算法 | Hexo</title>
+  <title>递归与栈：解决表达式求值 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="https://rscuber.github.io/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/index.html">
+  <meta name="description" content="递归与栈：解决表达式求值栈的典型应用场景操作系统中的线程栈">
+<meta property="og:type" content="article">
+<meta property="og:title" content="递归与栈：解决表达式求值">
+<meta property="og:url" content="https://rscuber.github.io/archives/84d13929.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="递归与栈：解决表达式求值栈的典型应用场景操作系统中的线程栈">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://cdn.staticaly.com/gh/rscuber/PicX@master/C_basic/Screen-Shot-2022-08-15-at-10.3k4d5y1wpe20.webp">
+<meta property="og:image" content="https://cdn.staticaly.com/gh/rscuber/PicX@master/C_basic/Screen-Shot-2022-08-15-at-10.6ldlx0odfmk0.webp">
+<meta property="og:image" content="https://cdn.staticaly.com/gh/rscuber/PicX@master/C_basic/Screen-Shot-2022-08-15-at-10.17w2gf4xa680.webp">
+<meta property="og:image" content="https://cdn.staticaly.com/gh/rscuber/PicX@master/C_basic/Screen-Shot-2022-08-15-at-11.6d4cge55afg0.webp">
+<meta property="og:image" content="https://cdn.staticaly.com/gh/rscuber/PicX@master/C_basic/Screen-Shot-2022-08-15-at-8.3vt3op2psfs0.webp">
+<meta property="og:image" content="https://cdn.staticaly.com/gh/rscuber/PicX@master/C_basic/Screen-Shot-2022-08-15-at-8.3vt3op2psfs0.webp">
+<meta property="article:published_time" content="2022-09-18T04:34:56.000Z">
+<meta property="article:modified_time" content="2022-09-18T04:36:22.001Z">
 <meta property="article:author" content="袁成让">
+<meta property="article:tag" content="数据结构与算法">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.staticaly.com/gh/rscuber/PicX@master/C_basic/Screen-Shot-2022-08-15-at-10.3k4d5y1wpe20.webp">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -170,377 +182,248 @@
           </div>
           <div id="js-content" class="content-ll">
             
-  
-  
+<article id="post-递归与栈：解决表达式求值" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2022" class="archive-year">2022</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/archives/f627e61a.html" class="archive-article-date">
-  	<time datetime="2022-09-18T04:37:05.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-09-18</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/archives/f627e61a.html">归并排序：从二路到多路</a>
+    <h1 class="article-title" itemprop="name">
+      递归与栈：解决表达式求值
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">数据结构与算法</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/archives/84d13929.html" class="archive-article-date">
+        
+        <a href="/archives/84d13929.html" class="archive-article-date">
   	<time datetime="2022-09-18T04:34:56.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-09-18</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/archives/84d13929.html">递归与栈：解决表达式求值</a>
-    </h1>
-  
+        <!-- 开始添加字数统计-->
+        
+          <div style="margin-top:10px;">
+    <span class="post-time">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-keyboard-o"></i>
+        <span class="post-meta-item-text">  字数统计: </span>
+        <span class="post-count">4.8k字</span>
+      </span>
+    </span>
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">数据结构与算法</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/数据结构与算法//" class="article-tag-list-link color3">数据结构与算法</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/archives/d591a1c8.html" class="archive-article-date">
-  	<time datetime="2022-09-12T14:14:41.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-09-12</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/archives/d591a1c8.html">深搜(DFS)与广搜(BFS): 初识问题状态空间</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">数据结构与算法</a>
-        		</li>
-      		
-		</ul>
-	</div>
+    <!--<span class="post-time">
+      &nbsp; | &nbsp;
+      <span class="post-meta-item-icon">
+        <i class="fa fa-hourglass-half"></i>
+        <span class="post-meta-item-text">  阅读时长: </span>
+        <span class="post-count">23分</span>
+      </span>
+    </span>-->
+</div>
 
           
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/数据结构与算法//" class="article-tag-list-link color3">数据结构与算法</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
+        <!-- 添加完成 -->
+        
+      </header>
     
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/archives/6ec855c6.html" class="archive-article-date">
-  	<time datetime="2022-08-14T13:46:27.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-08-14</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/archives/6ec855c6.html">线程池与任务队列</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">数据结构与算法</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/数据结构与算法//" class="article-tag-list-link color3">数据结构与算法</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/archives/a481c9f1.html" class="archive-article-date">
-  	<time datetime="2022-07-28T13:01:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-07-28</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/archives/a481c9f1.html">链表及经典问题</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">数据结构与算法</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/数据结构与算法//" class="article-tag-list-link color3">数据结构与算法</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/archives/8d4c9742.html" class="archive-article-date">
-  	<time datetime="2022-07-24T04:51:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-07-24</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/archives/8d4c9742.html">堆与优先队列</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">数据结构与算法</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/数据结构与算法//" class="article-tag-list-link color3">数据结构与算法</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/archives/8b60e5bf.html" class="archive-article-date">
-  	<time datetime="2022-07-18T15:40:15.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-07-18</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/archives/8b60e5bf.html">二叉树与经典问题</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">数据结构与算法</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/数据结构与算法//" class="article-tag-list-link color3">数据结构与算法</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
+    <div class="article-entry" itemprop="articleBody">
       
-        </div></section>
+        <h1 id="递归与栈：解决表达式求值"><a href="#递归与栈：解决表达式求值" class="headerlink" title="递归与栈：解决表达式求值"></a>递归与栈：解决表达式求值</h1><h2 id="栈的典型应用场景"><a href="#栈的典型应用场景" class="headerlink" title="栈的典型应用场景"></a>栈的典型应用场景</h2><h3 id="操作系统中的线程栈"><a href="#操作系统中的线程栈" class="headerlink" title="操作系统中的线程栈"></a>操作系统中的线程栈</h3><span id="more"></span>
+<p><img src="https://cdn.staticaly.com/gh/rscuber/PicX@master/C_basic/Screen-Shot-2022-08-15-at-10.3k4d5y1wpe20.webp" alt="线程栈"></p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">funcB</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> d;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">funcA</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> a;</span><br><span class="line">    <span class="keyword">int</span> b;</span><br><span class="line">    <span class="keyword">int</span> c;</span><br><span class="line">    <span class="built_in">funcB</span>();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<center><img src="https://cdn.staticaly.com/gh/rscuber/PicX@master/C_basic/Screen-Shot-2022-08-15-at-10.6ldlx0odfmk0.webp" width="30%"></center>
+
+
+<p><img src="https://cdn.staticaly.com/gh/rscuber/PicX@master/C_basic/Screen-Shot-2022-08-15-at-10.17w2gf4xa680.webp" alt="Screen-Shot-2022-08-15-at-10"></p>
+<p><strong>思考</strong></p>
+<blockquote>
+<p>栈空间有大小限制，小心爆栈。</p>
+</blockquote>
+<p><br><br><br><br><br></p>
+<h3 id="表达式求值"><a href="#表达式求值" class="headerlink" title="表达式求值"></a>表达式求值</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*************************************************************************</span></span><br><span class="line"><span class="comment">	&gt; File Name: expression_evalution.cpp</span></span><br><span class="line"><span class="comment">	&gt; Author: GodOfRang</span></span><br><span class="line"><span class="comment">	&gt; Motto: Barefoot makes wheels</span></span><br><span class="line"><span class="comment">	&gt; Created Time: Sat Jul  9 16:22:56 2022</span></span><br><span class="line"><span class="comment"> ************************************************************************/</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stack&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> INF 0x3f3f3f3f</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">calculate_v1</span><span class="params">(<span class="keyword">const</span> <span class="keyword">char</span> *str, <span class="keyword">int</span> l, <span class="keyword">int</span> r)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> pos = <span class="number">-1</span>, pri = INF - <span class="number">1</span>, temp = <span class="number">0</span>; <span class="comment">// pri 上一个运算符的优先级</span></span><br><span class="line">    <span class="comment">// pos表示运算符优先级最低的位置下标</span></span><br><span class="line">    <span class="comment">// temp用来提高&#x27;()&#x27;里运算符的优先级</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = l; i &lt;= r; i++) &#123; <span class="comment">// 先找到一个运算符优先级最低的位置</span></span><br><span class="line">        <span class="keyword">int</span> cur_pri = INF; <span class="comment">// 当前运算符的优先级</span></span><br><span class="line">        <span class="built_in"><span class="keyword">switch</span></span> (str[i]) &#123;</span><br><span class="line">            <span class="keyword">case</span> <span class="string">&#x27;+&#x27;</span>:</span><br><span class="line">            <span class="keyword">case</span> <span class="string">&#x27;-&#x27;</span>: cur_pri = temp + <span class="number">1</span>; <span class="keyword">break</span>;</span><br><span class="line">            <span class="keyword">case</span> <span class="string">&#x27;*&#x27;</span>: </span><br><span class="line">            <span class="keyword">case</span> <span class="string">&#x27;/&#x27;</span>: cur_pri = temp + <span class="number">2</span>; <span class="keyword">break</span>;</span><br><span class="line">            <span class="keyword">case</span> <span class="string">&#x27;(&#x27;</span>: temp += <span class="number">100</span>; <span class="keyword">break</span>;</span><br><span class="line">            <span class="keyword">case</span> <span class="string">&#x27;)&#x27;</span>: temp -= <span class="number">100</span>; <span class="keyword">break</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (cur_pri &lt;= pri) &#123; <span class="comment">//17行写在外面的话，这行必须要写&#x27;&lt;&#x27;</span></span><br><span class="line">            pos = i; </span><br><span class="line">            pri = cur_pri;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (pos == <span class="number">-1</span>) &#123; <span class="comment">//说明无运算符, 是纯数字, 需要转化成int</span></span><br><span class="line">        <span class="keyword">int</span> num = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = l; i &lt;= r; i++) &#123;</span><br><span class="line">            <span class="keyword">if</span> (str[i] &lt; <span class="string">&#x27;0&#x27;</span> || str[i] &gt; <span class="string">&#x27;9&#x27;</span>) <span class="keyword">continue</span>;</span><br><span class="line">            num = num * <span class="number">10</span> + (str[i] - <span class="string">&#x27;0&#x27;</span>);    </span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> num;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">int</span> a = <span class="built_in">calculate_v1</span>(str, l, pos - <span class="number">1</span>);</span><br><span class="line">    <span class="keyword">int</span> b = <span class="built_in">calculate_v1</span>(str, pos + <span class="number">1</span>, r);</span><br><span class="line">    <span class="built_in"><span class="keyword">switch</span></span> (str[pos]) &#123;</span><br><span class="line">        <span class="keyword">case</span> <span class="string">&#x27;+&#x27;</span>: <span class="keyword">return</span> a + b;</span><br><span class="line">        <span class="keyword">case</span> <span class="string">&#x27;-&#x27;</span>: <span class="keyword">return</span> a - b;</span><br><span class="line">        <span class="keyword">case</span> <span class="string">&#x27;*&#x27;</span>: <span class="keyword">return</span> a * b;</span><br><span class="line">        <span class="keyword">case</span> <span class="string">&#x27;/&#x27;</span>: <span class="keyword">return</span> a / b;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">level</span><span class="params">(<span class="keyword">char</span> op)</span> </span>&#123;</span><br><span class="line">    <span class="built_in"><span class="keyword">switch</span></span> (op) &#123;</span><br><span class="line">        <span class="keyword">case</span> <span class="string">&#x27;@&#x27;</span>: <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">        <span class="keyword">case</span> <span class="string">&#x27;+&#x27;</span>:</span><br><span class="line">        <span class="keyword">case</span> <span class="string">&#x27;-&#x27;</span>: <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">case</span> <span class="string">&#x27;*&#x27;</span>:</span><br><span class="line">        <span class="keyword">case</span> <span class="string">&#x27;/&#x27;</span>: <span class="keyword">return</span> <span class="number">2</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">calc</span><span class="params">(<span class="keyword">int</span> a, <span class="keyword">char</span> op, <span class="keyword">int</span> b)</span> </span>&#123;</span><br><span class="line">    <span class="built_in"><span class="keyword">switch</span></span> (op) &#123;</span><br><span class="line">        <span class="keyword">case</span> <span class="string">&#x27;+&#x27;</span>: <span class="keyword">return</span> a + b;</span><br><span class="line">        <span class="keyword">case</span> <span class="string">&#x27;-&#x27;</span>: <span class="keyword">return</span> a - b;</span><br><span class="line">        <span class="keyword">case</span> <span class="string">&#x27;*&#x27;</span>: <span class="keyword">return</span> a * b;</span><br><span class="line">        <span class="keyword">case</span> <span class="string">&#x27;/&#x27;</span>: <span class="keyword">return</span> a / b;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">calculate_v2</span><span class="params">(string s)</span> </span>&#123;</span><br><span class="line">    stack&lt;<span class="keyword">int</span>&gt; nums; <span class="comment">//操作数</span></span><br><span class="line">    stack&lt;<span class="keyword">char</span>&gt; ops; <span class="comment">//操作符</span></span><br><span class="line">    s += <span class="string">&quot;@&quot;</span>; <span class="comment">//简化代码所用,&#x27;@&#x27;优先级最低,所以前面的所有运算符都会完成计算</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>, n = <span class="number">0</span>; i &lt; s.<span class="built_in">size</span>(); i++) &#123;</span><br><span class="line">        <span class="keyword">if</span> (s[i] == <span class="string">&#x27; &#x27;</span>) <span class="keyword">continue</span>;</span><br><span class="line">        <span class="keyword">if</span> (s[i] &gt;= <span class="string">&#x27;0&#x27;</span> &amp;&amp; s[i] &lt;= <span class="string">&#x27;9&#x27;</span>) &#123;</span><br><span class="line">            n = n * <span class="number">10</span> + (s[i] - <span class="string">&#x27;0&#x27;</span>);</span><br><span class="line">            <span class="keyword">continue</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        nums.<span class="built_in">push</span>(n);</span><br><span class="line">        n = <span class="number">0</span>;</span><br><span class="line">        <span class="comment">// 如果当前运算符优先级小于栈顶运算符优先级,则计算栈顶运算符对应的操作数</span></span><br><span class="line">        <span class="keyword">while</span> (!ops.<span class="built_in">empty</span>() &amp;&amp; <span class="built_in">level</span>(s[i]) &lt;= <span class="built_in">level</span>(ops.<span class="built_in">top</span>())) &#123;</span><br><span class="line">            <span class="comment">//从操作数栈顶取出2个操作数,从操作符栈顶取出一个操作符进行计算</span></span><br><span class="line">            <span class="keyword">int</span> b = nums.<span class="built_in">top</span>(); nums.<span class="built_in">pop</span>();</span><br><span class="line">            <span class="keyword">int</span> a = nums.<span class="built_in">top</span>(); nums.<span class="built_in">pop</span>();</span><br><span class="line">            nums.<span class="built_in">push</span>(<span class="built_in">calc</span>(a, ops.<span class="built_in">top</span>(), b)); <span class="comment">//注意操作数顺序</span></span><br><span class="line">            ops.<span class="built_in">pop</span>();</span><br><span class="line">        &#125;</span><br><span class="line">        ops.<span class="built_in">push</span>(s[i]);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> nums.<span class="built_in">top</span>();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">char</span> str[<span class="number">100</span>];</span><br><span class="line">    <span class="keyword">while</span> (~<span class="built_in">scanf</span>(<span class="string">&quot;%[^\n]s&quot;</span>, str)) &#123;</span><br><span class="line">        <span class="built_in">getchar</span>();</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;%s = %d\n&quot;</span>, str, <span class="built_in">calculate_v1</span>(str, <span class="number">0</span>, <span class="built_in">strlen</span>(str) - <span class="number">1</span>));    </span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;%s = %d\n&quot;</span>, str, <span class="built_in">calculate_v2</span>(str));    </span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p><img src="https://cdn.staticaly.com/gh/rscuber/PicX@master/C_basic/Screen-Shot-2022-08-15-at-11.6d4cge55afg0.webp" alt="表达式树"></p>
+<p><strong>思考</strong></p>
+<blockquote>
+<ul>
+<li>遍历表达式字符串，以运算符为根节点，操作数为子节点构成表达式树。</li>
+<li>$3 \times (4 + 5)$ 之所以被看作是乘法表达式，是因为表达式中最后一个被计算的是乘号(即乘号优先级最低)。 $(4 + 5)$ 只是在计算乘法表达式之前需要解决的一个子问题。</li>
+<li>递归用了系统栈，递归也是：解决一个大问题之前需要解决一些小问题。</li>
+<li>负数可以看作是 $0 - 3$ 。</li>
+</ul>
+</blockquote>
+<p><br><br><br><br><br></p>
+<h2 id="经典⾯试题-栈的基本操作"><a href="#经典⾯试题-栈的基本操作" class="headerlink" title="经典⾯试题-栈的基本操作"></a>经典⾯试题-栈的基本操作</h2><h3 id="LeetCode-⾯试题03-04-化栈为队"><a href="#LeetCode-⾯试题03-04-化栈为队" class="headerlink" title="LeetCode ⾯试题03.04 化栈为队"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/implement-queue-using-stacks-lcci/">LeetCode ⾯试题03.04 化栈为队</a></h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MyQueue</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    stack&lt;<span class="keyword">int</span>&gt; s1, s2;</span><br><span class="line">    <span class="comment">/** Initialize your data structure here. */</span></span><br><span class="line">    <span class="built_in">MyQueue</span>() &#123;&#125;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">/** Push element x to the back of queue. */</span></span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">push</span><span class="params">(<span class="keyword">int</span> x)</span> </span>&#123;</span><br><span class="line">        s2.<span class="built_in">push</span>(x);</span><br><span class="line">        <span class="keyword">return</span> ;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">transfer</span><span class="params">()</span> </span>&#123; <span class="comment">//把2号栈的元素放到1号栈</span></span><br><span class="line">        <span class="keyword">while</span> (!s2.<span class="built_in">empty</span>()) &#123;</span><br><span class="line">            s1.<span class="built_in">push</span>(s2.<span class="built_in">top</span>());</span><br><span class="line">            s2.<span class="built_in">pop</span>();</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> ;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/** Removes the element from in front of queue and returns that element. */</span></span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">pop</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(s1.<span class="built_in">empty</span>()) <span class="built_in">transfer</span>();</span><br><span class="line">        <span class="keyword">int</span> ret = s1.<span class="built_in">top</span>();</span><br><span class="line">        s1.<span class="built_in">pop</span>();</span><br><span class="line">        <span class="keyword">return</span> ret;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">/** Get the front element. */</span></span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">peek</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(s1.<span class="built_in">empty</span>()) <span class="built_in">transfer</span>();</span><br><span class="line">        <span class="keyword">return</span> s1.<span class="built_in">top</span>();</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">/** Returns whether the queue is empty. */</span></span><br><span class="line">    <span class="function"><span class="keyword">bool</span> <span class="title">empty</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> s1.<span class="built_in">empty</span>() &amp;&amp; s2.<span class="built_in">empty</span>();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Your MyQueue object will be instantiated and called as such:</span></span><br><span class="line"><span class="comment"> * MyQueue* obj = new MyQueue();</span></span><br><span class="line"><span class="comment"> * obj-&gt;push(x);</span></span><br><span class="line"><span class="comment"> * int param_2 = obj-&gt;pop();</span></span><br><span class="line"><span class="comment"> * int param_3 = obj-&gt;peek();</span></span><br><span class="line"><span class="comment"> * bool param_4 = obj-&gt;empty();</span></span><br><span class="line"><span class="comment"> */</span></span><br></pre></td></tr></table></figure>
+<p><strong>思考</strong></p>
+<blockquote>
+<ul>
+<li>利⽤两个栈来实现，⼀个输⼊栈、⼀个输出栈。 </li>
+<li>输⼊栈⽤于读⼊数据。当需要输出元素时，若输出栈为空，则将输⼊栈的所有元素 推送到输出栈，然后取栈顶元素；若输出栈⾮空，则输出栈顶即可。 </li>
+<li>输出栈的作⽤是对已经被反转的序列进⾏⼆次反转。</li>
+</ul>
+</blockquote>
+<p><br><br><br></p>
+<h3 id="LeetCode-682-棒球⽐赛"><a href="#LeetCode-682-棒球⽐赛" class="headerlink" title="LeetCode 682.棒球⽐赛"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/baseball-game/">LeetCode 682.棒球⽐赛</a></h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">calPoints</span><span class="params">(vector&lt;string&gt;&amp; ops)</span> </span>&#123;</span><br><span class="line">        stack&lt;<span class="keyword">int</span>&gt; s;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; ops.<span class="built_in">size</span>(); i++) &#123;</span><br><span class="line">            <span class="built_in"><span class="keyword">switch</span></span> (ops[i][<span class="number">0</span>]) &#123;</span><br><span class="line">                <span class="keyword">case</span> <span class="string">&#x27;+&#x27;</span>: &#123;</span><br><span class="line">                    <span class="keyword">int</span> a = s.<span class="built_in">top</span>(); s.<span class="built_in">pop</span>();</span><br><span class="line">                    <span class="keyword">int</span> b = s.<span class="built_in">top</span>();</span><br><span class="line">                    s.<span class="built_in">push</span>(a);</span><br><span class="line">                    s.<span class="built_in">push</span>(a + b);</span><br><span class="line">                &#125; <span class="keyword">break</span>;</span><br><span class="line">                <span class="keyword">case</span> <span class="string">&#x27;D&#x27;</span>: &#123;</span><br><span class="line">                    s.<span class="built_in">push</span>(s.<span class="built_in">top</span>() * <span class="number">2</span>);</span><br><span class="line">                &#125; <span class="keyword">break</span>;</span><br><span class="line">                <span class="keyword">case</span> <span class="string">&#x27;C&#x27;</span>: &#123;</span><br><span class="line">                    s.<span class="built_in">pop</span>();</span><br><span class="line">                &#125; <span class="keyword">break</span>; </span><br><span class="line">                <span class="keyword">default</span>: s.<span class="built_in">push</span>(<span class="built_in">atoi</span>(ops[i].<span class="built_in">c_str</span>()));<span class="comment">//把string转化成int</span></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">int</span> sum = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">while</span> (!s.<span class="built_in">empty</span>()) &#123;</span><br><span class="line">            sum += s.<span class="built_in">top</span>();</span><br><span class="line">            s.<span class="built_in">pop</span>();</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> sum;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<p><br><br><br></p>
+<h3 id="LeetCode-844-⽐较含退格的字符串"><a href="#LeetCode-844-⽐较含退格的字符串" class="headerlink" title="LeetCode 844.⽐较含退格的字符串"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/backspace-string-compare/">LeetCode 844.⽐较含退格的字符串</a></h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//(解法一)</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">pushStack</span><span class="params">(string str, stack&lt;<span class="keyword">char</span>&gt; &amp;s)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; str.<span class="built_in">size</span>(); i++) &#123;</span><br><span class="line">            <span class="comment">//要注意栈为空，字符为‘#’的情况</span></span><br><span class="line">            <span class="keyword">if</span> (str[i] == <span class="string">&#x27;#&#x27;</span> &amp;&amp; !s.<span class="built_in">empty</span>()) s.<span class="built_in">pop</span>();</span><br><span class="line">            <span class="keyword">else</span> <span class="keyword">if</span> (str[i] != <span class="string">&#x27;#&#x27;</span>) s.<span class="built_in">push</span>(str[i]);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> ;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">bool</span> <span class="title">backspaceCompare</span><span class="params">(string s, string t)</span> </span>&#123;</span><br><span class="line">        stack&lt;<span class="keyword">char</span>&gt; s1, s2;</span><br><span class="line">        <span class="built_in">pushStack</span>(s, s1);</span><br><span class="line">        <span class="built_in">pushStack</span>(t, s2);</span><br><span class="line">        <span class="keyword">if</span> (s1.<span class="built_in">size</span>() != s2.<span class="built_in">size</span>()) <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">        <span class="keyword">while</span> (!s1.<span class="built_in">empty</span>()) &#123;</span><br><span class="line">            <span class="keyword">if</span> (s1.<span class="built_in">top</span>() != s2.<span class="built_in">top</span>()) <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">            s1.<span class="built_in">pop</span>(), s2.<span class="built_in">pop</span>();</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">//(解法二)，空间复杂度O(1)</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">bool</span> <span class="title">backspaceCompare</span><span class="params">(string s, string t)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> skipS = <span class="number">0</span>, skipT = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">int</span> i = s.<span class="built_in">size</span>() - <span class="number">1</span>, j = t.<span class="built_in">size</span>() - <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">while</span> (i &gt;= <span class="number">0</span> || j &gt;= <span class="number">0</span>) &#123;</span><br><span class="line">            <span class="keyword">while</span> (i &gt;= <span class="number">0</span>) &#123;</span><br><span class="line">                <span class="keyword">if</span> (s[i] == <span class="string">&#x27;#&#x27;</span>) skipS++, i--;</span><br><span class="line">                <span class="keyword">else</span> <span class="keyword">if</span> (skipS &gt; <span class="number">0</span>) skipS--, i--;</span><br><span class="line">                <span class="keyword">else</span> <span class="keyword">break</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">while</span> (j &gt;= <span class="number">0</span>) &#123;</span><br><span class="line">                <span class="keyword">if</span> (t[j] == <span class="string">&#x27;#&#x27;</span>) skipT++, j--;</span><br><span class="line">                <span class="keyword">else</span> <span class="keyword">if</span> (skipT &gt; <span class="number">0</span>) skipT--, j--;</span><br><span class="line">                <span class="keyword">else</span> <span class="keyword">break</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span> (i &gt;= <span class="number">0</span> &amp;&amp; j &gt;= <span class="number">0</span>) &#123;</span><br><span class="line">                <span class="keyword">if</span> (s[i] != t[j]) <span class="keyword">return</span> <span class="literal">false</span>; <span class="comment">//两个字符不相等</span></span><br><span class="line">            &#125; <span class="keyword">else</span> <span class="keyword">if</span> (i &gt;= <span class="number">0</span> || j &gt;= <span class="number">0</span>) <span class="keyword">return</span> <span class="literal">false</span>; <span class="comment">//有一个指针已越界</span></span><br><span class="line">            i--, j--;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<p><strong>思考</strong></p>
+<blockquote>
+<p>(解法二)由于 # 号只会消除左边的一个字符，所以对右边的字符无影响，所以我们选择从后往前遍历 $S$ ，$T$ 字符串。准备两个指针 $i$ , $j$ 分别指向 $S$ ，$T$ 的末位字符，再准备两个变量 $skipS$，$skipT$ 来分别存放 $S$，$T$ 字符串中的 # 数量。从后往前遍历 $S$，所遇情况有3种，如下所示。</p>
+<ul>
+<li>若当前字符是 #，则 $skipS$  自增 1；</li>
+<li>若当前字符不是 #，且 $skipS$  不为 0，则 $skipS$  自减 1；</li>
+<li>若当前字符不是 #，且 $skipS$  为 0，则代表当前字符不会被消除，我们可以用来和 $T$ 中的当前字符作比较。若对比过程出现 $S$ , $T$ 当前字符不匹配，则遍历结束，返回 $false$ ，若 $S$ ，$T$ 都遍历结束，且都能一一匹配，则返回 $true$。</li>
+</ul>
+</blockquote>
+<p><br><br><br></p>
+<h3 id="LeetCode-946-验证栈序列"><a href="#LeetCode-946-验证栈序列" class="headerlink" title="LeetCode 946.验证栈序列"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/validate-stack-sequences/">LeetCode 946.验证栈序列</a></h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">bool</span> <span class="title">validateStackSequences</span><span class="params">(vector&lt;<span class="keyword">int</span>&gt;&amp; pushed, vector&lt;<span class="keyword">int</span>&gt;&amp; popped)</span> </span>&#123;</span><br><span class="line">        stack&lt;<span class="keyword">int</span>&gt; s;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>, j = <span class="number">0</span>; i &lt; popped.<span class="built_in">size</span>(); i++) &#123;</span><br><span class="line">            <span class="keyword">while</span> (j &lt; pushed.<span class="built_in">size</span>() &amp;&amp; (s.<span class="built_in">empty</span>() || s.<span class="built_in">top</span>() != popped[i])) &#123;</span><br><span class="line">                s.<span class="built_in">push</span>(pushed[j++]);</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span> (s.<span class="built_in">top</span>() != popped[i]) <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">            s.<span class="built_in">pop</span>();</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<p><strong>思考</strong></p>
+<blockquote>
+<p>每次遍历到的出栈序列要么是当前栈顶元素，要么是为了将要入栈的某个元素。</p>
+</blockquote>
+<p><br><br><br></p>
+<h2 id="经典⾯试题-栈结构扩展应⽤"><a href="#经典⾯试题-栈结构扩展应⽤" class="headerlink" title="经典⾯试题-栈结构扩展应⽤"></a>经典⾯试题-栈结构扩展应⽤</h2><h3 id="LeetCode-20-有效的括号"><a href="#LeetCode-20-有效的括号" class="headerlink" title="LeetCode 20.有效的括号"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/valid-parentheses/">LeetCode 20.有效的括号</a></h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">bool</span> <span class="title">isValid</span><span class="params">(string s)</span> </span>&#123;</span><br><span class="line">        stack&lt;<span class="keyword">char</span>&gt; brackets;</span><br><span class="line">        unordered_map&lt;<span class="keyword">char</span>, <span class="keyword">char</span>&gt; valid;</span><br><span class="line">        valid[<span class="string">&#x27;)&#x27;</span>] = <span class="string">&#x27;(&#x27;</span>;</span><br><span class="line">        valid[<span class="string">&#x27;]&#x27;</span>] = <span class="string">&#x27;[&#x27;</span>;</span><br><span class="line">        valid[<span class="string">&#x27;&#125;&#x27;</span>] = <span class="string">&#x27;&#123;&#x27;</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; s.<span class="built_in">size</span>(); i++) &#123;</span><br><span class="line">            <span class="built_in"><span class="keyword">switch</span></span> (s[i]) &#123;</span><br><span class="line">                <span class="keyword">case</span> <span class="string">&#x27;(&#x27;</span>:</span><br><span class="line">                <span class="keyword">case</span> <span class="string">&#x27;[&#x27;</span>:</span><br><span class="line">                <span class="keyword">case</span> <span class="string">&#x27;&#123;&#x27;</span>: brackets.<span class="built_in">push</span>(s[i]); <span class="keyword">break</span>;</span><br><span class="line">                <span class="keyword">case</span> <span class="string">&#x27;)&#x27;</span>: </span><br><span class="line">                <span class="keyword">case</span> <span class="string">&#x27;]&#x27;</span>: </span><br><span class="line">                <span class="keyword">case</span> <span class="string">&#x27;&#125;&#x27;</span>: &#123;</span><br><span class="line">                    <span class="keyword">if</span> (brackets.<span class="built_in">empty</span>() || brackets.<span class="built_in">top</span>() != valid[s[i]]) <span class="keyword">return</span> <span class="literal">false</span>; </span><br><span class="line">                    brackets.<span class="built_in">pop</span>();</span><br><span class="line">                &#125; <span class="keyword">break</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> brackets.<span class="built_in">empty</span>();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<p><br></p>
+<p><strong>若只有小括号的情况</strong></p>
+<p><img src="https://cdn.staticaly.com/gh/rscuber/PicX@master/C_basic/Screen-Shot-2022-08-15-at-8.3vt3op2psfs0.webp" alt="Screen-Shot-2022-08-15-at-8"></p>
+<p><img src="https://cdn.staticaly.com/gh/rscuber/PicX@master/C_basic/Screen-Shot-2022-08-15-at-8.3vt3op2psfs0.webp" alt="Screen-Shot-2022-08-15-at-8"></p>
+<p><strong>思考</strong></p>
+<blockquote>
+<ul>
+<li>结论1：在任意⼀个位置上，左括号数量 右括号数量 </li>
+<li>结论2：在最后⼀个位置上，左括号数量 右括号数量 </li>
+<li><p>根据上述两个结论，程序中只需要记录左括号和右括号的数量即可。</p>
+</li>
+<li><p><code>(()())</code> 可以看作是要解决一个问题前，需要先解决两个小问题。例如：在 <code>funcA</code> 中调用了 <code>funcB</code> 和 <code>funcC</code>，先序遍历一颗二叉树，表达式求值等。</p>
+</li>
+<li>⼀对括号可以等价为⼀个完整的事件。左括号可以看作事件的开始、右括号可以看 作事件的结束。⽽括号序列可以看作事件与事件之间的完全包含关系。 栈可以处理具有完全包含关系的问题。 </li>
+</ul>
+</blockquote>
+<p><br><br><br></p>
+<h3 id="LeetCode-1021-删除最外层的括号"><a href="#LeetCode-1021-删除最外层的括号" class="headerlink" title="LeetCode 1021.删除最外层的括号"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/remove-outermost-parentheses/">LeetCode 1021.删除最外层的括号</a></h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function">string <span class="title">removeOuterParentheses</span><span class="params">(string s)</span> </span>&#123;</span><br><span class="line">        string ans;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>, pre = <span class="number">0</span>, cnt = <span class="number">0</span>; i &lt; s.<span class="built_in">size</span>(); i++) &#123;</span><br><span class="line">            <span class="comment">//pre表示原语起始位置</span></span><br><span class="line">            <span class="keyword">if</span> (s[i] == <span class="string">&#x27;(&#x27;</span>) cnt += <span class="number">1</span>;</span><br><span class="line">            <span class="keyword">else</span> cnt -= <span class="number">1</span>;</span><br><span class="line">            <span class="keyword">if</span> (cnt != <span class="number">0</span>) <span class="keyword">continue</span>;</span><br><span class="line">            ans += s.<span class="built_in">substr</span>(pre + <span class="number">1</span>, i - pre - <span class="number">1</span>); </span><br><span class="line">            pre = i + <span class="number">1</span>;  </span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> ans;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<p><strong>思考</strong></p>
+<blockquote>
+<ul>
+<li>用 $cnt$ 记录左括号和右括号差值，遇见左括号+1， 遇见右括号-1，为0时，代表这⼀串括号序列是独⽴的，可以被单独分解出来。</li>
+<li>cnt本质是栈顶指针，这题在思维逻辑上模拟了一个栈。</li>
+</ul>
+</blockquote>
+<p><br><br><br></p>
+<h3 id="LeetCode-1249-移除⽆效的括号"><a href="#LeetCode-1249-移除⽆效的括号" class="headerlink" title="LeetCode 1249.移除⽆效的括号"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/minimum-remove-to-make-valid-parentheses/">LeetCode 1249.移除⽆效的括号</a></h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//(解法一，超出时间限制)</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function">string <span class="title">minRemoveToMakeValid</span><span class="params">(string s)</span> </span>&#123;</span><br><span class="line">        string temp;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>, cnt = <span class="number">0</span>; i &lt; s.<span class="built_in">size</span>(); i++) &#123;</span><br><span class="line">            <span class="keyword">if</span> (s[i] != <span class="string">&#x27;)&#x27;</span>) &#123;</span><br><span class="line">                cnt += (s[i] == <span class="string">&#x27;(&#x27;</span>);</span><br><span class="line">                temp += s[i];</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                <span class="keyword">if</span> (cnt == <span class="number">0</span>) <span class="keyword">continue</span>;</span><br><span class="line">                cnt -= <span class="number">1</span>;</span><br><span class="line">                temp += s[i];</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        string ans;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = temp.<span class="built_in">size</span>() - <span class="number">1</span>, cnt = <span class="number">0</span>; i &gt;= <span class="number">0</span>; i--) &#123;</span><br><span class="line">            <span class="keyword">if</span> (temp[i] != <span class="string">&#x27;(&#x27;</span>) &#123;</span><br><span class="line">                cnt += (temp[i] == <span class="string">&#x27;)&#x27;</span>);</span><br><span class="line">                ans = temp[i] + ans; </span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                <span class="keyword">if</span> (cnt == <span class="number">0</span>) <span class="keyword">continue</span>;</span><br><span class="line">                cnt -= <span class="number">1</span>;</span><br><span class="line">                ans = <span class="string">&#x27;(&#x27;</span> + ans;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> ans;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">//(解法二)</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function">string <span class="title">minRemoveToMakeValid</span><span class="params">(string s)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">char</span> *temp = <span class="keyword">new</span> <span class="keyword">char</span>[s.<span class="built_in">size</span>() + <span class="number">1</span>];<span class="comment">//注意多申请一位用来存放&#x27;\0&#x27;</span></span><br><span class="line">        <span class="keyword">char</span> *ans = <span class="keyword">new</span> <span class="keyword">char</span>[s.<span class="built_in">size</span>() + <span class="number">1</span>];</span><br><span class="line">        <span class="keyword">int</span> len = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>, cnt = <span class="number">0</span>; i &lt; s.<span class="built_in">size</span>(); i++) &#123;<span class="comment">//去掉多余的右括号</span></span><br><span class="line">            <span class="keyword">if</span> (s[i] != <span class="string">&#x27;)&#x27;</span>) &#123;</span><br><span class="line">                cnt += (s[i] == <span class="string">&#x27;(&#x27;</span>); <span class="comment">//是左括号则+1</span></span><br><span class="line">                temp[len++] = s[i];</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                <span class="keyword">if</span> (cnt == <span class="number">0</span>) <span class="keyword">continue</span>;<span class="comment">//cnt=0说明这个右括号是多余的</span></span><br><span class="line">                cnt -= <span class="number">1</span>;</span><br><span class="line">                temp[len++] = s[i];<span class="comment">//等价于temp[len++] = &#x27;)&#x27;</span></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        ans[len] = <span class="string">&#x27;\0&#x27;</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = len - <span class="number">1</span>, cnt = <span class="number">0</span>; i &gt;= <span class="number">0</span>; i--) &#123;<span class="comment">//去掉多余的左括号</span></span><br><span class="line">            <span class="keyword">if</span> (temp[i] != <span class="string">&#x27;(&#x27;</span>) &#123;</span><br><span class="line">                cnt += (temp[i] == <span class="string">&#x27;)&#x27;</span>);</span><br><span class="line">                ans[--len] = temp[i]; </span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                <span class="keyword">if</span> (cnt == <span class="number">0</span>) <span class="keyword">continue</span>;<span class="comment">//cnt=0说明这个左括号是多余的</span></span><br><span class="line">                cnt -= <span class="number">1</span>;</span><br><span class="line">                ans[--len] = <span class="string">&#x27;(&#x27;</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">string</span>(ans + len); <span class="comment">//ans + len是字符串起始地址</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<p><strong>思考</strong></p>
+<blockquote>
+<ul>
+<li>可以被匹配的括号都是有效的，⽽其他的括号都需要被删除。</li>
+<li>从左到右扫描一遍字符串去掉多余右括号，再从右到左扫描一遍字符串去掉多余左括号。</li>
+<li>解法二相对于解法一来说减少了大量的字符串拷贝操作。</li>
+</ul>
+</blockquote>
+<p><br><br><br></p>
+<h3 id="LeetCode-145-⼆叉树的后序遍历"><a href="#LeetCode-145-⼆叉树的后序遍历" class="headerlink" title="LeetCode 145.⼆叉树的后序遍历"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/binary-tree-postorder-traversal/">LeetCode 145.⼆叉树的后序遍历</a></h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Definition for a binary tree node.</span></span><br><span class="line"><span class="comment"> * struct TreeNode &#123;</span></span><br><span class="line"><span class="comment"> *     int val;</span></span><br><span class="line"><span class="comment"> *     TreeNode *left;</span></span><br><span class="line"><span class="comment"> *     TreeNode *right;</span></span><br><span class="line"><span class="comment"> *     TreeNode() : val(0), left(nullptr), right(nullptr) &#123;&#125;</span></span><br><span class="line"><span class="comment"> *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) &#123;&#125;</span></span><br><span class="line"><span class="comment"> *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) &#123;&#125;</span></span><br><span class="line"><span class="comment"> * &#125;;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="comment">//(解法一，递归)</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="keyword">void</span> __postorderTraversal(TreeNode *root, vector&lt;<span class="keyword">int</span>&gt; &amp;ans) &#123;</span><br><span class="line">        <span class="keyword">if</span> (root == <span class="literal">nullptr</span>) <span class="keyword">return</span> ;</span><br><span class="line">        __postorderTraversal(root-&gt;left, ans);</span><br><span class="line">        __postorderTraversal(root-&gt;right, ans);</span><br><span class="line">        ans.<span class="built_in">push_back</span>(root-&gt;val);</span><br><span class="line">        <span class="keyword">return</span> ;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function">vector&lt;<span class="keyword">int</span>&gt; <span class="title">postorderTraversal</span><span class="params">(TreeNode* root)</span> </span>&#123;</span><br><span class="line">        vector&lt;<span class="keyword">int</span>&gt; ans;</span><br><span class="line">        __postorderTraversal(root, ans);</span><br><span class="line">        <span class="keyword">return</span> ans;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">//(解法二，迭代)</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function">vector&lt;<span class="keyword">int</span>&gt; <span class="title">postorderTraversal</span><span class="params">(TreeNode* root)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (root == <span class="literal">nullptr</span>) <span class="keyword">return</span> vector&lt;<span class="keyword">int</span>&gt;();</span><br><span class="line">        stack&lt;TreeNode *&gt; s1; <span class="comment">//递归过程中的局部变量</span></span><br><span class="line">        stack&lt;<span class="keyword">int</span>&gt; s2; <span class="comment">// 递归过程中的栈顶元素的状态码</span></span><br><span class="line">        <span class="comment">// 0: 将要压入栈顶元素的左子树</span></span><br><span class="line">        <span class="comment">// 1: 将要压入栈顶元素的右子树</span></span><br><span class="line">        <span class="comment">// 2: 将要输出栈顶元素</span></span><br><span class="line">        vector&lt;<span class="keyword">int</span>&gt; ans;<span class="comment">//后序遍历序列</span></span><br><span class="line">        s1.<span class="built_in">push</span>(root);</span><br><span class="line">        s2.<span class="built_in">push</span>(<span class="number">0</span>);</span><br><span class="line">        <span class="keyword">while</span> (!s1.<span class="built_in">empty</span>()) &#123;</span><br><span class="line">            <span class="built_in"><span class="keyword">switch</span></span> (s2.<span class="built_in">top</span>()) &#123;</span><br><span class="line">                <span class="keyword">case</span> <span class="number">0</span>: &#123;</span><br><span class="line">                    s2.<span class="built_in">pop</span>();</span><br><span class="line">                    s2.<span class="built_in">push</span>(<span class="number">1</span>);<span class="comment">//更新原有状态码</span></span><br><span class="line">                    <span class="comment">//若左子树为空则视为左子树已遍历完成</span></span><br><span class="line">                    <span class="keyword">if</span> (s1.<span class="built_in">top</span>()-&gt;left == <span class="literal">nullptr</span>) <span class="keyword">continue</span>;</span><br><span class="line">                    s1.<span class="built_in">push</span>(s1.<span class="built_in">top</span>()-&gt;left);</span><br><span class="line">                    s2.<span class="built_in">push</span>(<span class="number">0</span>);</span><br><span class="line">                &#125; <span class="keyword">break</span>;</span><br><span class="line">                <span class="keyword">case</span> <span class="number">1</span>: &#123;</span><br><span class="line">                    s2.<span class="built_in">pop</span>();</span><br><span class="line">                    s2.<span class="built_in">push</span>(<span class="number">2</span>);<span class="comment">//更新原有状态码</span></span><br><span class="line">                    <span class="comment">//若右子树为空则视为右子树已遍历完成</span></span><br><span class="line">                    <span class="keyword">if</span> (s1.<span class="built_in">top</span>()-&gt;right == <span class="literal">nullptr</span>) <span class="keyword">continue</span>;</span><br><span class="line">                    s1.<span class="built_in">push</span>(s1.<span class="built_in">top</span>()-&gt;right);</span><br><span class="line">                    s2.<span class="built_in">push</span>(<span class="number">0</span>);</span><br><span class="line">                &#125; <span class="keyword">break</span>;</span><br><span class="line">                <span class="keyword">case</span> <span class="number">2</span>: &#123;</span><br><span class="line">                    <span class="comment">//访问子树的根节点</span></span><br><span class="line">                    ans.<span class="built_in">push_back</span>(s1.<span class="built_in">top</span>()-&gt;val);</span><br><span class="line">                    s1.<span class="built_in">pop</span>();</span><br><span class="line">                    s2.<span class="built_in">pop</span>();</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> ans;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">//(解法三，Morris遍历, 线性时间内，只占用常数空间来实现后序遍历)</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p><strong>思考</strong></p>
+<blockquote>
+<ul>
+<li>递归本质也是用了栈(系统栈)。</li>
+<li>递归做法⽐较简单，在这⾥介绍⼀下基于迭代的做法。 技巧是使⽤两个栈，⼀个数据栈，⼀个状态栈。将“遍历左⼦树”，“遍历右⼦ 树”和“访问根节点”三个步骤分别⽤状态码表⽰，枚举状态转移过程，使⽤有限 状态⾃动机（FSM, Finite State Machine）的模型来模拟递归过程。</li>
+<li>在做迭代版本解法之前，需要先思考下各类“遍历”算法的本质是什么？是最后输出的那一串有序的数字吗？数字的顺序是对的，遍历算法就是对的吗？否。“遍历”的本质是对内存的有序访问，失去了访问顺序，即便你用各种数据结构恢复了这个次序，遍历本身也显得毫无意义。</li>
+</ul>
+</blockquote>
+<p><br><br><br></p>
+<h3 id="LeetCode-331-验证⼆叉树的前序序列化"><a href="#LeetCode-331-验证⼆叉树的前序序列化" class="headerlink" title="LeetCode 331.验证⼆叉树的前序序列化"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/verify-preorder-serialization-of-a-binary-tree/">LeetCode 331.验证⼆叉树的前序序列化</a></h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">bool</span> <span class="title">isValidSerialization</span><span class="params">(string preorder)</span> </span>&#123;</span><br><span class="line">        vector&lt;string&gt; arr;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>, j = <span class="number">0</span>; i &lt; preorder.<span class="built_in">size</span>(); i = j + <span class="number">1</span>, j = i + <span class="number">1</span>) &#123;</span><br><span class="line">            <span class="keyword">while</span> (j &lt; preorder.<span class="built_in">size</span>() &amp;&amp; preorder[j] != <span class="string">&#x27;,&#x27;</span>) ++j;</span><br><span class="line">            arr.<span class="built_in">push_back</span>(preorder.<span class="built_in">substr</span>(i, j - i));<span class="comment">//将逗号分隔的字符串拆出来</span></span><br><span class="line">            <span class="keyword">int</span> last = arr.<span class="built_in">size</span>() - <span class="number">1</span>;</span><br><span class="line">            <span class="keyword">while</span> (arr.<span class="built_in">size</span>() &gt;= <span class="number">3</span> &amp;&amp; arr[last] == <span class="string">&quot;#&quot;</span> &amp;&amp; arr[last - <span class="number">1</span>] == <span class="string">&quot;#&quot;</span> &amp;&amp; arr[last - <span class="number">2</span>] != <span class="string">&quot;#&quot;</span>) &#123;<span class="comment">//缩点过程</span></span><br><span class="line">                arr[last - <span class="number">2</span>] = <span class="string">&quot;#&quot;</span>;</span><br><span class="line">                arr.<span class="built_in">pop_back</span>();</span><br><span class="line">                arr.<span class="built_in">pop_back</span>();</span><br><span class="line">                last = arr.<span class="built_in">size</span>() - <span class="number">1</span>;<span class="comment">//跟新最后一个元素下标</span></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> arr.<span class="built_in">size</span>() == <span class="number">1</span> &amp;&amp; arr[<span class="number">0</span>] == <span class="string">&quot;#&quot;</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<p><strong>思考</strong></p>
+<blockquote>
+<p>每次奖⼀个“数字、#、#”的节点（即叶⼦结点）缩成一个”#“的节点，最后树上的全部节点 都会被拆光（即只剩⼀个“#”），能拆光的序列就是合法序列。</p>
+</blockquote>
+<p><br><br><br></p>
+<h3 id="LeetCode-227-基本计算器II"><a href="#LeetCode-227-基本计算器II" class="headerlink" title="LeetCode 227.基本计算器II"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/basic-calculator-ii/">LeetCode 227.基本计算器II</a></h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">level</span><span class="params">(<span class="keyword">char</span> op)</span> </span>&#123;</span><br><span class="line">        <span class="built_in"><span class="keyword">switch</span></span> (op) &#123;</span><br><span class="line">            <span class="keyword">case</span> <span class="string">&#x27;@&#x27;</span>: <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">            <span class="keyword">case</span> <span class="string">&#x27;+&#x27;</span>:</span><br><span class="line">            <span class="keyword">case</span> <span class="string">&#x27;-&#x27;</span>: <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">            <span class="keyword">case</span> <span class="string">&#x27;*&#x27;</span>:</span><br><span class="line">            <span class="keyword">case</span> <span class="string">&#x27;/&#x27;</span>: <span class="keyword">return</span> <span class="number">2</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">calc</span><span class="params">(<span class="keyword">int</span> a, <span class="keyword">char</span> op, <span class="keyword">int</span> b)</span> </span>&#123;</span><br><span class="line">        <span class="built_in"><span class="keyword">switch</span></span> (op) &#123;</span><br><span class="line">            <span class="keyword">case</span> <span class="string">&#x27;+&#x27;</span>: <span class="keyword">return</span> a + b;</span><br><span class="line">            <span class="keyword">case</span> <span class="string">&#x27;-&#x27;</span>: <span class="keyword">return</span> a - b;</span><br><span class="line">            <span class="keyword">case</span> <span class="string">&#x27;*&#x27;</span>: <span class="keyword">return</span> a * b;</span><br><span class="line">            <span class="keyword">case</span> <span class="string">&#x27;/&#x27;</span>: <span class="keyword">return</span> a / b;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">calculate</span><span class="params">(string s)</span> </span>&#123;</span><br><span class="line">        stack&lt;<span class="keyword">int</span>&gt; nums;<span class="comment">//操作数</span></span><br><span class="line">        stack&lt;<span class="keyword">char</span>&gt; ops;<span class="comment">//运算符，本质单调栈(栈内运算符优先级单调增)</span></span><br><span class="line">        s += <span class="string">&quot;@&quot;</span>;<span class="comment">//加一个优先级最低的运算符，使得遍历完字符串即可得到运算结果</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>, digit = <span class="number">0</span>; i &lt; s.<span class="built_in">size</span>(); i++) &#123;</span><br><span class="line">            <span class="keyword">if</span> (s[i] == <span class="string">&#x27; &#x27;</span>) <span class="keyword">continue</span>;</span><br><span class="line">            <span class="keyword">if</span> (s[i] &gt;= <span class="string">&#x27;0&#x27;</span> &amp;&amp; s[i] &lt;= <span class="string">&#x27;9&#x27;</span>) &#123;<span class="comment">//获得操作数</span></span><br><span class="line">                digit = digit * <span class="number">10</span> + (s[i] &amp; <span class="number">15</span>);<span class="comment">//s[i] &amp; 15 &lt;==&gt; s[i] - &#x27;0&#x27;</span></span><br><span class="line">                <span class="keyword">continue</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            nums.<span class="built_in">push</span>(digit);</span><br><span class="line">            digit = <span class="number">0</span>; <span class="comment">//记得重新将digit赋值为0</span></span><br><span class="line">            <span class="keyword">while</span> (!ops.<span class="built_in">empty</span>() &amp;&amp; <span class="built_in">level</span>(s[i]) &lt;= <span class="built_in">level</span>(ops.<span class="built_in">top</span>())) &#123;</span><br><span class="line">                <span class="comment">//当前运算符比栈顶运算符优先级低</span></span><br><span class="line">                <span class="keyword">int</span> a = nums.<span class="built_in">top</span>(); nums.<span class="built_in">pop</span>();</span><br><span class="line">                <span class="keyword">int</span> b = nums.<span class="built_in">top</span>(); nums.<span class="built_in">pop</span>();</span><br><span class="line">                nums.<span class="built_in">push</span>(<span class="built_in">calc</span>(b, ops.<span class="built_in">top</span>(), a));<span class="comment">//注意操作数顺序</span></span><br><span class="line">                ops.<span class="built_in">pop</span>();</span><br><span class="line">            &#125;</span><br><span class="line">            ops.<span class="built_in">push</span>(s[i]);<span class="comment">//将当前运算符压入栈</span></span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> nums.<span class="built_in">top</span>();<span class="comment">//栈顶运算为最终运算答案</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<p><strong>思考</strong></p>
+<blockquote>
+<p>使⽤操作数栈和操作符栈辅助计算，当操作符栈遇到更低优先级的操作符 时，需要将之前更⾼级别的操作符对应的结果计算出来。 对于有括号的情况，左括号相当于提⾼了内部全部运算符的优先级，当遇到右括号 的时候需要将匹配的括号间的内容全部计算出来。 可以通过加⼀个特殊操作符(设置为优先级最低)的处理技巧，来额外处理结尾的数字。</p>
+</blockquote>
+<p><br><br><br></p>
+<h2 id="经典⾯试题-智⼒发散题"><a href="#经典⾯试题-智⼒发散题" class="headerlink" title="经典⾯试题-智⼒发散题"></a>经典⾯试题-智⼒发散题</h2><h3 id="LeetCode-636-函数的独占时间"><a href="#LeetCode-636-函数的独占时间" class="headerlink" title="LeetCode 636.函数的独占时间"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/exclusive-time-of-functions/">LeetCode 636.函数的独占时间</a></h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function">vector&lt;<span class="keyword">int</span>&gt; <span class="title">exclusiveTime</span><span class="params">(<span class="keyword">int</span> n, vector&lt;string&gt;&amp; logs)</span> </span>&#123;</span><br><span class="line">        <span class="function">vector&lt;<span class="keyword">int</span>&gt; <span class="title">ans</span><span class="params">(n)</span></span>;<span class="comment">//每个函数的独占时间</span></span><br><span class="line">        stack&lt;<span class="keyword">int</span>&gt; FID;<span class="comment">//函数id</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>, pre = <span class="number">0</span>; i &lt; logs.<span class="built_in">size</span>(); i++) &#123; <span class="comment">//pre表示上一个时间戳</span></span><br><span class="line">            <span class="keyword">int</span> pos1 = logs[i].<span class="built_in">find_first_of</span>(<span class="string">&quot;:&quot;</span>);</span><br><span class="line">            <span class="keyword">int</span> pos2 = logs[i].<span class="built_in">find_last_of</span>(<span class="string">&quot;:&quot;</span>);</span><br><span class="line">            string id_str = logs[i].<span class="built_in">substr</span>(<span class="number">0</span>, pos1);</span><br><span class="line">            string status = logs[i].<span class="built_in">substr</span>(pos1 + <span class="number">1</span>, pos2 - pos1 - <span class="number">1</span>);</span><br><span class="line">            string time_str = logs[i].<span class="built_in">substr</span>(pos2 + <span class="number">1</span>, logs[i].<span class="built_in">size</span>());</span><br><span class="line">            <span class="keyword">int</span> id = <span class="built_in">atoi</span>(id_str.<span class="built_in">c_str</span>());<span class="comment">//获取函数id的int值</span></span><br><span class="line">            <span class="keyword">int</span> timestamp = <span class="built_in">atoi</span>(time_str.<span class="built_in">c_str</span>());<span class="comment">//获取函数时间戳的int值</span></span><br><span class="line">            <span class="keyword">if</span> (status == <span class="string">&quot;start&quot;</span>) &#123;</span><br><span class="line">                <span class="keyword">if</span> (!FID.<span class="built_in">empty</span>()) &#123;</span><br><span class="line">                    ans[FID.<span class="built_in">top</span>()] += timestamp - pre;<span class="comment">//左闭右开</span></span><br><span class="line">                &#125;</span><br><span class="line">                pre = timestamp;</span><br><span class="line">                FID.<span class="built_in">push</span>(id);<span class="comment">//函数开始执行，入栈</span></span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                ans[id] += timestamp - pre + <span class="number">1</span>;<span class="comment">//左闭右闭，此时id = FID.top()</span></span><br><span class="line">                pre = timestamp + <span class="number">1</span>;</span><br><span class="line">                FID.<span class="built_in">pop</span>();<span class="comment">//函数执行结束，出栈</span></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> ans;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">//(解法二，将解法一代吗进行了化简)</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function">vector&lt;<span class="keyword">int</span>&gt; <span class="title">exclusiveTime</span><span class="params">(<span class="keyword">int</span> n, vector&lt;string&gt;&amp; logs)</span> </span>&#123;</span><br><span class="line">        <span class="function">vector&lt;<span class="keyword">int</span>&gt; <span class="title">ans</span><span class="params">(n)</span></span>;<span class="comment">//每个函数的独占时间</span></span><br><span class="line">        stack&lt;<span class="keyword">int</span>&gt; FID;<span class="comment">//函数id</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>, pre = <span class="number">0</span>; i &lt; logs.<span class="built_in">size</span>(); i++) &#123; <span class="comment">//pre表示上一个时间戳</span></span><br><span class="line">            <span class="keyword">int</span> pos1 = logs[i].<span class="built_in">find_first_of</span>(<span class="string">&quot;:&quot;</span>);</span><br><span class="line">            <span class="keyword">int</span> pos2 = logs[i].<span class="built_in">find_last_of</span>(<span class="string">&quot;:&quot;</span>);</span><br><span class="line">            string id_str = logs[i].<span class="built_in">substr</span>(<span class="number">0</span>, pos1);</span><br><span class="line">            string status = logs[i].<span class="built_in">substr</span>(pos1 + <span class="number">1</span>, pos2 - pos1 - <span class="number">1</span>);</span><br><span class="line">            string time_str = logs[i].<span class="built_in">substr</span>(pos2 + <span class="number">1</span>, logs[i].<span class="built_in">size</span>());</span><br><span class="line">            <span class="keyword">int</span> id = <span class="built_in">atoi</span>(id_str.<span class="built_in">c_str</span>());<span class="comment">//获取函数id的int值</span></span><br><span class="line">            <span class="keyword">int</span> timestamp = <span class="built_in">atoi</span>(time_str.<span class="built_in">c_str</span>());<span class="comment">//获取函数时间戳的int值</span></span><br><span class="line">            <span class="keyword">if</span> (!FID.<span class="built_in">empty</span>()) ans[FID.<span class="built_in">top</span>()] += timestamp - pre + (status == <span class="string">&quot;end&quot;</span>);</span><br><span class="line">            pre = timestamp + (status == <span class="string">&quot;end&quot;</span>);</span><br><span class="line">            <span class="keyword">if</span> (status == <span class="string">&quot;start&quot;</span>) FID.<span class="built_in">push</span>(id);<span class="comment">//函数开始执行，入栈</span></span><br><span class="line">            <span class="keyword">else</span> FID.<span class="built_in">pop</span>();<span class="comment">//函数执行结束，出栈</span></span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> ans;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<p><strong>思考</strong></p>
+<blockquote>
+<p>本质就是⼀道模拟函数调用时系统栈的题，画⼀个线段图能显著地辅助理解。任务开始时进栈，上⼀个 任务暂停执⾏；任务完成时出栈，恢复上⼀个任务的执⾏。</p>
+</blockquote>
+<p><br><br><br></p>
+<h3 id="LeetCode-1124-表现良好的最⻓时间段"><a href="#LeetCode-1124-表现良好的最⻓时间段" class="headerlink" title="LeetCode 1124.表现良好的最⻓时间段"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/longest-well-performing-interval/">LeetCode 1124.表现良好的最⻓时间段</a></h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">longestWPI</span><span class="params">(vector&lt;<span class="keyword">int</span>&gt;&amp; hours)</span> </span>&#123;</span><br><span class="line">        unordered_map&lt;<span class="keyword">int</span>, <span class="keyword">int</span>&gt; index; <span class="comment">//index[cnt] = i 表示前缀和等于cnt的第一次出现的位置下标</span></span><br><span class="line">        unordered_map&lt;<span class="keyword">int</span>, <span class="keyword">int</span>&gt; f; <span class="comment">//f[n]表示第一次出现的前缀和=n的最长子序列长度</span></span><br><span class="line">        index[<span class="number">0</span>] = <span class="number">-1</span>;</span><br><span class="line">        f[<span class="number">0</span>] = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">int</span> ans = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>, cnt = <span class="number">0</span>; i &lt; hours.<span class="built_in">size</span>(); i++) &#123;</span><br><span class="line">            <span class="keyword">if</span> (hours[i] &gt; <span class="number">8</span>) cnt += <span class="number">1</span>;</span><br><span class="line">            <span class="keyword">else</span> cnt -= <span class="number">1</span>;</span><br><span class="line">            <span class="keyword">if</span> (index.<span class="built_in">find</span>(cnt) == index.<span class="built_in">end</span>()) &#123;</span><br><span class="line">                index[cnt] = i; </span><br><span class="line">                <span class="comment">//每一个cnt都要有f值</span></span><br><span class="line">                <span class="keyword">if</span> (f.<span class="built_in">find</span>(cnt - <span class="number">1</span>) == f.<span class="built_in">end</span>()) f[cnt] = <span class="number">0</span>;</span><br><span class="line">                <span class="keyword">else</span> f[cnt] = f[cnt - <span class="number">1</span>] + i - index[cnt - <span class="number">1</span>];</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span> (index.<span class="built_in">find</span>(cnt - <span class="number">1</span>) == index.<span class="built_in">end</span>()) <span class="keyword">continue</span>;<span class="comment">//说明前面没有比他小的</span></span><br><span class="line">            ans = <span class="built_in">max</span>(ans, f[cnt - <span class="number">1</span>] + i - index[cnt - <span class="number">1</span>]);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> ans;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<p><strong>思考</strong></p>
+<blockquote>
+<p>把表现“良好”记为+1，把表现“不好”记为-1，将原序列转化为正负1的序列，原 问题转化为求转化后序列的最⻓⼀段连续⼦序列，使得⼦序列的和⼤于0。 在这⾥引⼊“前缀和”的技巧。前缀和数组的第n项，是原数组前n项的和。 记原数组为 ，那么前缀和 。这样就可以将“区间和”转化 为“前缀和”之差来计算。前缀和可以视情况补⼀个前导0，表⽰前0项之和，即不 取任何元素的情况。 在本题中， 数组中的元素只有-1和1，因此前缀和 的变化⼀定是连续的。我 们记录下前缀和中，每⼀个前缀和第⼀次出现的位置，它对应的位置⼀定是从该前 缀和出发的最优解。 我们以 表⽰以 结尾的序列的最⼤⻓度， 表⽰前缀和 第⼀次出现的位 置。那么有 。</p>
+</blockquote>
+
+      
+
+<!- 百度自动推送方式提交 -->
+
+  <script>
+  (function(){
+      var bp = document.createElement('script');
+      var curProtocol = window.location.protocol.split(':')[0];
+      if (curProtocol === 'https') {
+          bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+      }
+      else {
+          bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+      }
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(bp, s);
+  })();
+  </script>
+
+<!- 百度自动推送方式提交结束 -->
+
+
+
+  <div class="declare">
+    <!--<strong>本文作者：</strong>
+    
+      袁成让
+    
+    <br>-->
+    <strong>本文链接：</strong>
+    https://rscuber.github.io/archives/84d13929.html
+    <br>
+    <strong>版权声明：</strong>
+    本作品采用
+    <a rel="license noopener" target="_blank" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a>
+    进行许可。转载请注明出处！
+    
+      <br>
+      <a rel="license noopener" target="_blank" href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png"/></a>
+    
+  </div>
+
+
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/img/wechat.png">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
       
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2021" class="archive-year">2021</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/archives/ff8e2396.html" class="archive-article-date">
-  	<time datetime="2021-11-10T15:32:02.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-11-10</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/archives/ff8e2396.html">哈夫曼树与哈夫曼编码</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -552,7 +435,7 @@
 		</ul>
 	</div>
 
-          
+      
 	<div class="article-category tagcloud">
 		<i class="icon-book icon"></i>
 		<ul class="article-tag-list">
@@ -565,19 +448,131 @@
 	</div>
 
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://rscuber.github.io/archives/84d13929.html" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+    <a href="/archives/f627e61a.html" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          归并排序：从二路到多路
+        
+      </div>
+    </a>
   
   
-    </div></section>
+    <a href="/archives/d591a1c8.html" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">深搜(DFS)与广搜(BFS): 初识问题状态空间</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+  
+  
   
 
-    
+  
+
+  
+
+  
 
 
+
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
 
           </div>
         </div>
@@ -628,9 +623,9 @@
 	var yiliaConfig = {
 		mathjax: [object Object],
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: false,
 		toc_hide_index: true,
