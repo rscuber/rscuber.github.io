@@ -22,7 +22,7 @@
 <meta property="og:image" content="https://cdn.staticaly.com/gh/rscuber/PicX@master/C_basic/Screen-Shot-2022-08-12-at-3.5csn8mba0pc0.webp">
 <meta property="og:image" content="https://cdn.staticaly.com/gh/rscuber/PicX@master/C_basic/Screen-Shot-2022-08-12-at-4.4uajbdclu6u0.webp">
 <meta property="article:published_time" content="2022-08-14T13:46:27.000Z">
-<meta property="article:modified_time" content="2022-08-14T13:52:09.262Z">
+<meta property="article:modified_time" content="2022-09-21T07:07:07.838Z">
 <meta property="article:author" content="袁成让">
 <meta property="article:tag" content="数据结构与算法">
 <meta name="twitter:card" content="summary">
@@ -499,11 +499,11 @@
   
 <nav id="article-nav">
   
-    <a href="/archives/d591a1c8.html" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/archives/84d13929.html" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          深搜(DFS)与广搜(BFS): 初识问题状态空间
+          递归与栈：解决表达式求值
         
       </div>
     </a>
@@ -529,6 +529,19 @@
             </div>
         </div>
         
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%BA%BF%E7%A8%8B%E6%B1%A0%E4%B8%8E%E4%BB%BB%E5%8A%A1%E9%98%9F%E5%88%97"><span class="toc-number">1.</span> <span class="toc-text">线程池与任务队列</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%98%9F%E5%88%97%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86"><span class="toc-number">1.1.</span> <span class="toc-text">队列基础知识</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9F%BA%E4%BA%8E%E6%95%B0%E7%BB%84%E5%AE%9E%E7%8E%B0%E7%9A%84%E7%AE%80%E5%8D%95%E5%BE%AA%E7%8E%AF%E9%98%9F%E5%88%97"><span class="toc-number">1.1.1.</span> <span class="toc-text">基于数组实现的简单循环队列</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%98%9F%E5%88%97%E7%9A%84%E5%85%B8%E5%9E%8B%E5%BA%94%E7%94%A8%E5%9C%BA%E6%99%AF"><span class="toc-number">1.2.</span> <span class="toc-text">队列的典型应用场景</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#CPU%E7%9A%84%E8%B6%85%E7%BA%BF%E7%A8%8B%E6%8A%80%E6%9C%AF"><span class="toc-number">1.2.1.</span> <span class="toc-text">CPU的超线程技术</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BA%BF%E7%A8%8B%E6%B1%A0%E7%9A%84%E4%BB%BB%E5%8A%A1%E9%98%9F%E5%88%97"><span class="toc-number">1.2.2.</span> <span class="toc-text">线程池的任务队列</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%BA%BF%E7%A8%8B%E6%B1%A0%E7%9A%84%E5%AE%9E%E7%8E%B0"><span class="toc-number">1.2.2.1.</span> <span class="toc-text">线程池的实现</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#LOG%E6%97%A5%E5%BF%97%E7%9A%84%E5%AE%9E%E7%8E%B0"><span class="toc-number">1.2.2.2.</span> <span class="toc-text">LOG日志的实现</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%BF%90%E8%A1%8C%E7%BB%93%E6%9E%9C"><span class="toc-number">1.2.2.3.</span> <span class="toc-text">运行结果</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BB%8F%E5%85%B8%E9%9D%A2%E8%AF%95%E9%A2%98-%E9%93%BE%E8%A1%A8%E5%A4%8D%E4%B9%A0%E9%A2%98"><span class="toc-number">1.3.</span> <span class="toc-text">经典面试题-链表复习题</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Leetcode-86-%E5%88%86%E9%9A%94%E9%93%BE%E8%A1%A8"><span class="toc-number">1.3.1.</span> <span class="toc-text">Leetcode 86.分隔链表</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Leetcode-138-%E5%A4%8D%E5%88%B6%E5%B8%A6%E9%9A%8F%E6%9C%BA%E6%8C%87%E9%92%88%E7%9A%84%E9%93%BE%E8%A1%A8"><span class="toc-number">1.3.2.</span> <span class="toc-text">Leetcode 138.复制带随机指针的链表</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BB%8F%E5%85%B8%E9%9D%A2%E8%AF%95%E9%A2%98-%E9%98%9F%E5%88%97%E7%9A%84%E5%B0%81%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8"><span class="toc-number">1.4.</span> <span class="toc-text">经典面试题-队列的封装与使用</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Leetcode-622-%E8%AE%BE%E8%AE%A1%E5%BE%AA%E7%8E%AF%E9%98%9F%E5%88%97"><span class="toc-number">1.4.1.</span> <span class="toc-text">Leetcode 622.设计循环队列</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Leetcode-641-%E8%AE%BE%E8%AE%A1%E5%BE%AA%E7%8E%AF%E5%8F%8C%E7%AB%AF%E9%98%9F%E5%88%97"><span class="toc-number">1.4.2.</span> <span class="toc-text">Leetcode 641.设计循环双端队列</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Leetcode-1670-%E8%AE%BE%E8%AE%A1%E5%89%8D%E4%B8%AD%E5%90%8E%E9%98%9F%E5%88%97"><span class="toc-number">1.4.3.</span> <span class="toc-text">Leetcode 1670.设计前中后队列</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Leetcode-933-%E6%9C%80%E8%BF%91%E7%9A%84%E8%AF%B7%E6%B1%82%E6%AC%A1%E6%95%B0"><span class="toc-number">1.4.4.</span> <span class="toc-text">Leetcode 933.最近的请求次数</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BB%8F%E5%85%B8%E9%9D%A2%E8%AF%95%E9%A2%98-%E6%99%BA%E5%8A%9B%E5%8F%91%E6%95%A3%E9%A2%98"><span class="toc-number">1.5.</span> <span class="toc-text">经典面试题-智力发散题</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#LeetCode-%E9%9D%A2%E8%AF%95%E9%A2%98-17-09-%E7%AC%ACK%E4%B8%AA%E6%95%B0"><span class="toc-number">1.5.1.</span> <span class="toc-text">LeetCode 面试题 17.09 第K个数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Leetcode-859-%E4%BA%B2%E5%AF%86%E5%AD%97%E7%AC%A6%E4%B8%B2"><span class="toc-number">1.5.2.</span> <span class="toc-text">Leetcode 859.亲密字符串</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Leetcode-860-%E6%9F%A0%E6%AA%AC%E6%B0%B4%E6%89%BE%E9%9B%B6"><span class="toc-number">1.5.3.</span> <span class="toc-text">Leetcode 860.柠檬水找零</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Leetcode-969-%E7%85%8E%E9%A5%BC%E6%8E%92%E5%BA%8F"><span class="toc-number">1.5.4.</span> <span class="toc-text">Leetcode 969.煎饼排序</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#LeetCode-621-%E4%BB%BB%E5%8A%A1%E8%B0%83%E5%BA%A6"><span class="toc-number">1.5.5.</span> <span class="toc-text">LeetCode 621.任务调度</span></a></li></ol></li></ol></li></ol>
+                    </div>
+                </span>
+            </div>
+        </div>
         
     </div>
 </aside>
@@ -709,15 +722,15 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Markdown</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">Hexo</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">工具</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Markdown</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -910,5 +923,21 @@ MathJax.Hub.Queue(function() {
 
 </div>
   </div>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
 </body>
 </html>
